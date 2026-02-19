@@ -7,7 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23030308'/%3E%3Crect width='32' height='32' rx='6' fill='none' stroke='%2300f5ff' stroke-width='1.5'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='13' font-weight='700' fill='%2300f5ff' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Georgian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root{--c:#00f5ff;--c2:rgba(0,245,255,.12);--p:#8b5cf6;--p2:rgba(139,92,246,.12);--g:#fbbf24;--pk:#ec4899;--bg:#030308;--bg2:#06060f;}
         *,*::before,*::after{box-sizing:border-box;}
@@ -219,6 +219,28 @@
         .deco-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Space Grotesk',sans-serif;font-size:20vw;font-weight:700;color:rgba(255,255,255,.013);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-5px;}
 
         @media(max-width:768px){.hero{padding:90px 0 70px;}.sec{padding:80px 0;}.proj-feat{padding:28px;}.proj-sm{padding:24px;}.tl-item{padding-left:48px;}}
+
+        /* GEORGIAN FONT */
+        html[lang="ka"] body{font-family:'Noto Sans Georgian','Inter',system-ui,sans-serif;}
+        html[lang="ka"] .hd{font-family:'Noto Sans Georgian','Space Grotesk',sans-serif;}
+        html[lang="ka"] .mono{font-family:'Noto Sans Georgian','JetBrains Mono',monospace;}
+        html[lang="ka"] .nl{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .mm-link{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .hire-btn{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .sec-lbl{font-family:'Noto Sans Georgian',monospace;}
+        html[lang="ka"] .sec-h{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .tl-date{font-family:'Noto Sans Georgian',monospace;}
+        html[lang="ka"] .tl-role{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .btn-p,html[lang="ka"] .btn-s{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .cert-org{font-family:'Noto Sans Georgian',monospace;}
+        html[lang="ka"] .tag{font-family:'Noto Sans Georgian',monospace;}
+        html[lang="ka"] .typed-line{font-family:'Noto Sans Georgian',monospace;}
+        html[lang="ka"] .mini-stat-lbl{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .impact-lbl{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .lang-btn{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .status-badge{font-family:'Noto Sans Georgian',sans-serif;}
+        html[lang="ka"] .pl-txt{font-family:'Noto Sans Georgian',monospace;}
+        html[lang="ka"] .contact-phone{font-family:'Noto Sans Georgian',monospace;}
     </style>
 </head>
 <body>
@@ -668,68 +690,68 @@ var i18n={
   },
   ka:{
     'pl.init':'პორტფოლიო იტვირთება',
-    'nav.about':'ჩემ შეს','nav.journey':'გამოცდ.','nav.projects':'პროექ.',
-    'nav.expertise':'ექსპ.','nav.impact':'გავლენა','nav.contact':'კონტაქტი',
+    'nav.about':'ჩემს შესახებ','nav.journey':'გამოცდილება','nav.projects':'პროექტები',
+    'nav.expertise':'ექსპერტიზა','nav.impact':'გავლენა','nav.contact':'კონტაქტი',
     'nav.hire':'<i class="fas fa-envelope" style="font-size:.72rem;"></i> დამიქირავე',
     'scroll.txt':'გადახვევა',
-    'hero.badge':'<div class="sdot"></div>კონსულტ. &amp; ლექციებზე ხელმისაწვდ.',
-    'hero.desc':'დამფ. @ AI Software Factory &bull; PSM II სერტ.<br>AI SaaS &bull; 157+ სტუდ. მენტ. &bull; გუნდ. ტრანსფ.',
+    'hero.badge':'<div class="sdot"></div>ხელმისაწვდომია კონსულტაციისა &amp; ლექციებისთვის',
+    'hero.desc':'დამფუძნებელი @ AI Software Factory &bull; PSM II სერტიფიცირებული<br>AI-ზე დაფუძნებული SaaS &bull; 157+ სტუდენტის მენტორი &bull; გუნდების ტრანსფორმაცია',
     'hero.cta1':'ვითანამშრომლოთ <i class="fas fa-arrow-right" style="font-size:.72rem;"></i>',
-    'hero.cta2':'ნახეთ გამოცდ. <i class="fas fa-chevron-down" style="font-size:.72rem;"></i>',
-    'stat.certs':'სერტიფიკ.','stat.years':'წ. AGILE','stat.students':'სტუდენტ.',
+    'hero.cta2':'ნახეთ გამოცდილება <i class="fas fa-chevron-down" style="font-size:.72rem;"></i>',
+    'stat.certs':'სერტიფიკატები','stat.years':'წელი AGILE','stat.students':'სტუდენტები',
     'about.lbl':'თავი 01 &bull; ვინაობა',
-    'about.h':'AI ინოვატორი.<br><span class="grad-text">Agile ლიდერი.</span><br>ტექ პედაგოგი.',
-    'about.p1':'AI მეწარმე, საჯარო მართვის მაგისტრი გერმ. ადმ. მეც. უნივ. Speyer-იდან. ავითარებს SaaS პროდ. <span class="hi-c">AI Software Factory Ltd (ლონდ.)</span>-ის დამფ.-ად, Senior Scrum Master-ია <span class="hi-g">Caucasus Auto Import</span>-ში და ამზ. ტექ-ლიდ. Alte University-ში.',
-    'about.p2':'<span class="hi-p">SmartBookly.com</span>-ის შემქმნელი &mdash; all-in-one პლატფ. მცირე &amp; საშ. ბიზნ. 6 ოფ. Scrum.org სერტ. დასაბ. გამ. AI-ში, Agile ტრ-სა და ტექ. განათ-ში.',
+    'about.h':'AI ინოვატორი.<br><span class="grad-text">Agile ლიდერი.</span><br>ტექნოლოგიების პედაგოგი.',
+    'about.p1':'AI მეწარმე, საჯარო მართვის მაგისტრი გერმანიის ადმინისტრაციულ მეცნიერებათა უნივერსიტეტიდან (Speyer). ამჟამად ავითარებს SaaS პროდუქტებს, როგორც <span class="hi-c">AI Software Factory Ltd (ლონდონი)</span>-ის დამფუძნებელი, მუშაობს Senior Scrum Master-ად <span class="hi-g">Caucasus Auto Import</span>-ში და ამზადებს მომავალ ტექნოლოგიურ ლიდერებს Alte University-ში.',
+    'about.p2':'<span class="hi-p">SmartBookly.com</span>-ის შემქმნელი &mdash; ყოვლისმომცველი პლატფორმა მცირე და საშუალო ბიზნესისთვის. 6 ოფიციალური Scrum.org სერტიფიკატი. დადასტურებული გამოცდილება AI-ში, Agile ტრანსფორმაციასა და ტექნოლოგიური განათლების სფეროში.',
     'journey.lbl':'თავი 02 &bull; გამოცდილება','journey.h':'გამოცდილება',
-    'j1.date':'იანვ 2024 &mdash; დღეს','j1.role':'Senior Scrum Master',
+    'j1.date':'იანვარი 2024 &mdash; დღემდე','j1.role':'Senior Scrum Master',
     'j1.co':'Caucasus Auto Import &bull; თბილისი',
-    'j1.li1':'Scrum-ი ორგ. მასშტ. დანერგა',
-    'j1.li2':'გუნდებსა &amp; ლიდ. ამზადებდა',
-    'j1.li3':'Agile კულტ. &amp; პროც. ააგო',
-    'j2.date':'მარ 2021 &mdash; იანვ 2024','j2.role':'Scrum Master','j2.co':'Betsson Group',
-    'j2.li1':'ყველა Scrum ღონ. ხელ. შეუწყო',
-    'j2.li2':'PO &amp; თვ.-ორგ. გუნდ. მხარდ.',
-    'j2.li3':'კონფლ. მოგვ. &amp; კომ.',
-    'j3.date':'მაი 2025 &mdash; დღეს','j3.role':'დამფუძნებელი &amp; დირექტორი',
-    'j3.co':'AI Software Factory Ltd &bull; ლონდ. (დისტ.)',
-    'j3.desc':'AI-ზე დაფ. გადაწყვ., ელიტ. Agile პრ. ინტელ. პროგ. მომ. შ.',
-    'j4.date':'სექტ 2022 &mdash; დღეს','j4.role':'ასისტ.-პროფ. (IT ფაკ.)',
+    'j1.li1':'Scrum-ის ორგანიზაციის მასშტაბით დანერგვა',
+    'j1.li2':'მრავალ გუნდსა და ლიდერებს უწევდა მენტორობას',
+    'j1.li3':'Agile კულტურისა და პროცესების ჩამოყალიბება',
+    'j2.date':'მარტი 2021 &mdash; იანვარი 2024','j2.role':'Scrum Master','j2.co':'Betsson Group',
+    'j2.li1':'ყველა Scrum ღონისძიების ფასილიტაცია',
+    'j2.li2':'პროდუქტის მფლობელისა და თვითორგანიზებული გუნდების მხარდაჭერა',
+    'j2.li3':'კონფლიქტების მოგვარება და კომუნიკაცია',
+    'j3.date':'მაისი 2025 &mdash; დღემდე','j3.role':'დამფუძნებელი და დირექტორი',
+    'j3.co':'AI Software Factory Ltd &bull; ლონდონი (დისტანციური)',
+    'j3.desc':'AI-ზე დაფუძნებული გადაწყვეტილებები, შექმნილი ელიტური Agile პრაქტიკით. ინტელექტუალური პროგრამული უზრუნველყოფის მომავლის შექმნა.',
+    'j4.date':'სექტემბერი 2022 &mdash; დღემდე','j4.role':'ასისტენტ-პროფესორი (IT ფაკულტეტი)',
     'j4.co':'Alte University &bull; თბილისი',
-    'j4.desc':'ბლოკჩეინი &bull; ჭკვ. კონტ. &bull; ტექ-ის ისტ.',
-    'proj.lbl':'თავი 03 &bull; ინოვაციები','proj.h':'გამ. პროექტები',
-    'proj.sub':'AI-ზე დაფ. გადაწყვ.-ებ. მომ. შ.',
-    'sb.live':'LIVE &amp; ფუნქც.',
-    'sb.desc':'All-in-one SaaS პლ., ბიზ. მართ. ინოვ. მცირე &amp; საშ. ბიზ. AI ავტომ. &amp; რეალ.-დ. ანალ.',
-    'sb.f1t':'ბიზ. მართვა','sb.f1d':'CRM, ინვ. &amp; კლ. მართ.',
-    'sb.f2t':'ანალ. &amp; ინფ.','sb.f2d':'რეალ.-დ. დაფ. &amp; ბ. ინტ.',
-    'sb.f3t':'AI-ზე დ.','sb.f3d':'ინტ. ავტომ. &amp; ჭ. რეკ.',
-    'sb.f4t':'დაჯ. სისტ.','sb.f4d':'ავტ. ჯავ. &amp; შეხვ. მართ.',
-    'sb.f5t':'გად. დამ.','sb.f5d':'ინტ. გ. კარ. &amp; ბილ. ავ.',
-    'sb.f6t':'მრ.-პლ.','sb.f6d':'რეაგ. დ. ვებ, ტ. &amp; მობ.',
-    'tag.fs':'Full-Stack Dev.','tag.ai':'AI ინტ.','tag.sa':'SaaS არქ.',
-    'tag.ci':'ღ. ინფ.','tag.ad':'Agile განვ.',
-    'tag.cd':'პროგ. დიზ.','tag.sc':'ჭკვ. კონტ.',
-    'tag.sf':'Scrum ჩარჩო','tag.tc':'გუნდ. კოუჩ.','tag.po':'პრ. ოპტ.',
-    'sb.role':'<span class="hi-p" style="font-weight:600;">ჩემი როლი:</span> დამფ., Lead Dev &amp; PO. ნულ. დ. შ. გ. &amp; ა. Agile/Scrum. წ. გ. ა. ბ. მომხ.-ებ.',
-    'bc.h':'ბლოკჩეინ. განათ.',
-    'bc.desc':'ბლ., ჭ. კ. &amp; ტ. ის. კ. Alte University-ში.',
-    'at.h':'Agile ტრანსფ.',
-    'at.desc':'Scrum ორგ. დ. C. A. I.-ში, საშ. 40%-ით გაზ. სიჩ.',
-    'exp.lbl':'თ. 04 &bull; სერტ. ბრწყ.','exp.h':'ექსპ. &amp; სერტ.',
-    'c1n':'Professional Scrum Master II','c1o':'Scrum.org &bull; 2023','c1d':'მ. კოუჩ. &amp; ორგ. სისწ.',
-    'c2n':'Professional Scrum Product Owner I','c2o':'Scrum.org &bull; ოქტ 2023','c2d':'პ. ხედ. &amp; ღ. მაქს.',
-    'c3n':'PAL I &bull; PSK I','c3o':'Scrum.org &bull; 2023-2024','c3d':'Agile ლ. + Kanban',
-    'c4n':'AI &amp; მ. სწ.','c4o':'უწყვ. სწ.','c4d':'AI განვ. &amp; SaaS არქ.',
-    'c5n':'ბლ. &amp; Web3','c5o':'აკ. ექსპ.','c5d':'ჭ. კ., DeFi &amp; გ. სის.',
-    'c6n':'მაგ. ხარ.','c6o':'Uni. Speyer &bull; გერმ.','c6d':'საჯ. მ. &amp; მმ.',
+    'j4.desc':'ბლოკჩეინი &bull; ჭკვიანი კონტრაქტები &bull; ტექნოლოგიების ისტორია',
+    'proj.lbl':'თავი 03 &bull; ინოვაციები','proj.h':'გამორჩეული პროექტები',
+    'proj.sub':'AI-ზე დაფუძნებული გადაწყვეტილებებით მომავლის შექმნა',
+    'sb.live':'LIVE და ფუნქციონალური',
+    'sb.desc':'ყოვლისმომცველი SaaS პლატფორმა, რომელიც ახდენს ბიზნესის მართვის რევოლუციას მცირე და საშუალო ბიზნესისთვის AI-ზე დაფუძნებული ავტომატიზაციითა და რეალურ დროში ანალიტიკით.',
+    'sb.f1t':'ბიზნესის მართვა','sb.f1d':'სრული CRM, ინვოისინგი და კლიენტების მართვა',
+    'sb.f2t':'ანალიტიკა და ინსაითები','sb.f2d':'რეალურ დროში დაფები და ბიზნეს ინტელექტი',
+    'sb.f3t':'AI-ზე დაფუძნებული','sb.f3d':'ინტელექტუალური ავტომატიზაცია და ჭკვიანი რეკომენდაციები',
+    'sb.f4t':'დაჯავშნის სისტემა','sb.f4d':'ავტომატური ჯავშანი და შეხვედრების მართვა',
+    'sb.f5t':'გადახდების დამუშავება','sb.f5d':'ინტეგრირებული გადახდის კარიბჭე და ბილინგის ავტომატიზაცია',
+    'sb.f6t':'მულტი-პლატფორმა','sb.f6d':'რეაგირებადი დიზაინი ვებისთვის, ტაბლეტისა და მობილურისთვის',
+    'tag.fs':'Full-Stack დეველოპმენტი','tag.ai':'AI ინტეგრაცია','tag.sa':'SaaS არქიტექტურა',
+    'tag.ci':'ღრუბლოვანი ინფრასტრუქტურა','tag.ad':'Agile განვითარება',
+    'tag.cd':'სასწავლო პროგრამის დიზაინი','tag.sc':'ჭკვიანი კონტრაქტები',
+    'tag.sf':'Scrum ჩარჩო','tag.tc':'გუნდის კოუჩინგი','tag.po':'პროცესების ოპტიმიზაცია',
+    'sb.role':'<span class="hi-p" style="font-weight:600;">ჩემი როლი:</span> დამფუძნებელი, წამყვანი დეველოპერი და პროდუქტის მფლობელი. პლატფორმა ნულიდან ჩავიფიქრე, დავპროექტე და ავაშენე. მთელი განვითარების პროცესში Agile/Scrum მეთოდოლოგიას ვიყენებდი. წარმატებით გავუშვი აქტიური მომხმარებლებით და მუდმივი ფუნქციური განახლებებით.',
+    'bc.h':'ბლოკჩეინის განათლება',
+    'bc.desc':'ბლოკჩეინის, ჭკვიანი კონტრაქტებისა და ტექნოლოგიების ისტორიის ყოვლისმომცველი სასწავლო კურსი Alte University-ში.',
+    'at.h':'Agile ტრანსფორმაცია',
+    'at.desc':'Scrum-ის ორგანიზაციის მასშტაბით დანერგვა Caucasus Auto Import-ში, საშუალო სიჩქარის 40%-ით გაზრდის მიღწევა.',
+    'exp.lbl':'თავი 04 &bull; სერტიფიცირებული ბრწყინვალება','exp.h':'ექსპერტიზა და აკრედიტაციები',
+    'c1n':'Professional Scrum Master II','c1o':'Scrum.org &bull; 2023','c1d':'მოწინავე კოუჩინგი და ორგანიზაციული სისწრაფე',
+    'c2n':'Professional Scrum Product Owner I','c2o':'Scrum.org &bull; ოქტომბერი 2023','c2d':'პროდუქტის ხედვა და ღირებულების მაქსიმიზაცია',
+    'c3n':'PAL I &bull; PSK I','c3o':'Scrum.org &bull; 2023-2024','c3d':'Agile ლიდერობა + Kanban',
+    'c4n':'AI და მანქანური სწავლება','c4o':'უწყვეტი სწავლა','c4d':'გამოყენებითი AI განვითარება და SaaS არქიტექტურა',
+    'c5n':'ბლოკჩეინი და Web3','c5o':'აკადემიური ექსპერტიზა','c5d':'ჭკვიანი კონტრაქტები, DeFi და განაწილებული სისტემები',
+    'c6n':'მაგისტრის ხარისხი','c6o':'Uni. Speyer &bull; გერმანია','c6d':'საჯარო მართვა და მმართველობა',
     'imp.lbl':'თავი 05 &bull; მეტრიკა','imp.h':'რეალური გავლენა',
-    'imp.l1':'LIVE SaaS პ.','imp.l2':'წ. AGILE ლ.',
-    'imp.l3':'სტ. მენტ.','imp.l4':'საშ. სიჩ. ზ.',
+    'imp.l1':'LIVE SaaS პროდუქტი','imp.l2':'წელი AGILE ლიდერობა',
+    'imp.l3':'სტუდენტის მენტორობა','imp.l4':'საშუალო სიჩქარის ზრდა',
     'con.lbl':'ბოლო თავი',
-    'con.h':'მზადა დავაჩქარო<br><span class="grad-text">თქვენი შემდეგი პრ.?</span>',
-    'con.footer':'&copy; 2026 ანანია დევსურაშვილი &bull; შექ. სიყვ. საქართველოში &#x1F1EC;&#x1F1EA;',
-    'typedPhrases':['AI მეწარმე','Senior Scrum Master','ტექ პედაგოგი','დამფ. @ AI Software Factory','PSM II სერტ.','ბლოკჩეინის ლექტ.']
+    'con.h':'მზად ხართ დავაჩქაროთ<br><span class="grad-text">თქვენი შემდეგი პროექტი?</span>',
+    'con.footer':'&copy; 2026 ანანია დევსურაშვილი &bull; შექმნილია სიყვარულით საქართველოში &#x1F1EC;&#x1F1EA;',
+    'typedPhrases':['AI მეწარმე','Senior Scrum Master','ტექნოლოგიების პედაგოგი','დამფუძნებელი @ AI Software Factory','PSM II სერტიფიცირებული','ბლოკჩეინის ლექტორი']
   }
 };
 
