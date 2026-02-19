@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anania Devsurashvili | AI Entrepreneur &#x2022; Senior Scrum Master &#x2022; Tech Educator</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23030308'/%3E%3Crect width='32' height='32' rx='6' fill='none' stroke='%2300f5ff' stroke-width='1.5'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='13' font-weight='700' fill='%2300f5ff' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -202,7 +203,8 @@
         .contact-phone:hover{color:rgba(255,255,255,.7);}
         .soc-btn{width:50px;height:50px;border:1px solid rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;color:rgba(255,255,255,.45);text-decoration:none;transition:all .3s;}
         .soc-btn:hover{border-color:rgba(0,245,255,.4);color:var(--c);box-shadow:0 0 20px rgba(0,245,255,.18);}
-        .soc-yt:hover{border-color:rgba(239,68,68,.4);color:#ef4444;box-shadow:0 0 20px rgba(239,68,68,.18);}
+        .lang-btn{padding:6px 13px;background:transparent;border:1px solid rgba(0,245,255,.22);border-radius:4px;color:rgba(255,255,255,.5);font-family:'Space Grotesk',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:1.5px;transition:all .3s;}
+        .lang-btn:hover{border-color:rgba(0,245,255,.45);color:var(--c);box-shadow:0 0 14px rgba(0,245,255,.15);}
 
         /* BACK TO TOP */
         #btt{position:fixed;bottom:28px;right:28px;z-index:50;width:44px;height:44px;border:1px solid rgba(0,245,255,.28);background:rgba(0,0,0,.5);backdrop-filter:blur(10px);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--c);font-size:.9rem;opacity:0;pointer-events:none;transition:all .3s;}
@@ -235,7 +237,7 @@
 <div id="preloader">
     <div class="pl-logo">AD</div>
     <div class="pl-track"><div class="pl-bar"></div></div>
-    <div class="pl-txt">INITIALIZING PORTFOLIO</div>
+    <div class="pl-txt" data-i18n="pl.init">INITIALIZING PORTFOLIO</div>
 </div>
 
 <!-- NAVBAR -->
@@ -246,15 +248,16 @@
             <span class="hd" style="font-size:1.1rem;font-weight:600;letter-spacing:-.5px;color:#fff;">ANANIA</span>
         </a>
         <div class="hidden md:flex" style="gap:36px;align-items:center;">
-            <a href="#about" class="nl">ABOUT</a>
-            <a href="#journey" class="nl">JOURNEY</a>
-            <a href="#projects" class="nl">PROJECTS</a>
-            <a href="#expertise" class="nl">EXPERTISE</a>
-            <a href="#impact" class="nl">IMPACT</a>
-            <a href="#contact" class="nl">CONTACT</a>
+            <a href="#about" class="nl" data-i18n="nav.about">ABOUT</a>
+            <a href="#journey" class="nl" data-i18n="nav.journey">JOURNEY</a>
+            <a href="#projects" class="nl" data-i18n="nav.projects">PROJECTS</a>
+            <a href="#expertise" class="nl" data-i18n="nav.expertise">EXPERTISE</a>
+            <a href="#impact" class="nl" data-i18n="nav.impact">IMPACT</a>
+            <a href="#contact" class="nl" data-i18n="nav.contact">CONTACT</a>
         </div>
         <div style="display:flex;align-items:center;gap:14px;">
-            <a href="mailto:ananiadevsurashvili@gmail.com" class="hire-btn hidden md:flex">
+            <button id="langBtn" class="lang-btn hidden md:flex" onclick="setLang(currentLang==='en'?'ka':'en')">KA</button>
+            <a href="mailto:ananiadevsurashvili@gmail.com" class="hire-btn hidden md:flex" data-i18n="nav.hire">
                 <i class="fas fa-envelope" style="font-size:.72rem;"></i> HIRE ME
             </a>
             <button id="menuToggle" class="menu-btn md:hidden" onclick="toggleMenu()" aria-label="Menu">
@@ -270,13 +273,14 @@
         <i class="fas fa-times"></i>
     </button>
     <div style="display:flex;flex-direction:column;align-items:center;width:100%;padding:0 32px;">
-        <a href="#about"     onclick="toggleMenu()" class="mm-link">ABOUT</a>
-        <a href="#journey"   onclick="toggleMenu()" class="mm-link">JOURNEY</a>
-        <a href="#projects"  onclick="toggleMenu()" class="mm-link">PROJECTS</a>
-        <a href="#expertise" onclick="toggleMenu()" class="mm-link">EXPERTISE</a>
-        <a href="#impact"    onclick="toggleMenu()" class="mm-link">IMPACT</a>
-        <a href="#contact"   onclick="toggleMenu()" class="mm-link">CONTACT</a>
-        <a href="mailto:ananiadevsurashvili@gmail.com" style="margin-top:28px;padding:14px 36px;border:1px solid var(--c);color:var(--c);font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:2px;text-decoration:none;border-radius:4px;">HIRE ME</a>
+        <a href="#about"     onclick="toggleMenu()" class="mm-link" data-i18n="nav.about">ABOUT</a>
+        <a href="#journey"   onclick="toggleMenu()" class="mm-link" data-i18n="nav.journey">JOURNEY</a>
+        <a href="#projects"  onclick="toggleMenu()" class="mm-link" data-i18n="nav.projects">PROJECTS</a>
+        <a href="#expertise" onclick="toggleMenu()" class="mm-link" data-i18n="nav.expertise">EXPERTISE</a>
+        <a href="#impact"    onclick="toggleMenu()" class="mm-link" data-i18n="nav.impact">IMPACT</a>
+        <a href="#contact"   onclick="toggleMenu()" class="mm-link" data-i18n="nav.contact">CONTACT</a>
+        <a href="mailto:ananiadevsurashvili@gmail.com" data-i18n="nav.hire" style="margin-top:28px;padding:14px 36px;border:1px solid var(--c);color:var(--c);font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:2px;text-decoration:none;border-radius:4px;">HIRE ME</a>
+        <button id="langBtnMob" class="lang-btn" onclick="setLang(currentLang==='en'?'ka':'en')" style="margin-top:18px;">KA</button>
     </div>
 </div>
 
@@ -295,7 +299,7 @@
                          style="width:200px;height:200px;border-radius:50%;object-fit:cover;border:3px solid rgba(0,245,255,.3);box-shadow:0 0 40px rgba(0,245,255,.18);">
                 </div>
 
-                <div class="rv"><div class="status-badge"><div class="sdot"></div>OPEN TO SPEAKING &amp; CONSULTING</div></div>
+                <div class="rv"><div class="status-badge" data-i18n="hero.badge"><div class="sdot"></div>OPEN TO SPEAKING &amp; CONSULTING</div></div>
 
                 <div class="rv d1">
                     <h1 class="hero-title glitch" data-text="ANANIA">ANANIA</h1>
@@ -307,20 +311,20 @@
                     <span class="typed-line" id="typedEl"></span><span class="typed-cur"></span>
                 </div>
 
-                <p class="rv d3" style="font-size:1rem;line-height:1.85;color:rgba(255,255,255,.48);max-width:520px;">
+                <p class="rv d3" data-i18n="hero.desc" style="font-size:1rem;line-height:1.85;color:rgba(255,255,255,.48);max-width:520px;">
                     Founder @ AI Software Factory &bull; PSM II Certified<br>
                     Building AI-powered SaaS &bull; Mentoring 157+ students &bull; Transforming teams
                 </p>
 
                 <div class="rv d4" style="display:flex;flex-wrap:wrap;gap:14px;">
-                    <a href="#contact" class="btn-p">LET'S COLLABORATE <i class="fas fa-arrow-right" style="font-size:.72rem;"></i></a>
-                    <a href="#journey" class="btn-s">VIEW JOURNEY <i class="fas fa-chevron-down" style="font-size:.72rem;"></i></a>
+                    <a href="#contact" class="btn-p" data-i18n="hero.cta1">LET'S COLLABORATE <i class="fas fa-arrow-right" style="font-size:.72rem;"></i></a>
+                    <a href="#journey" class="btn-s" data-i18n="hero.cta2">VIEW JOURNEY <i class="fas fa-chevron-down" style="font-size:.72rem;"></i></a>
                 </div>
 
                 <div class="rv d5" style="display:flex;gap:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);">
-                    <div><div class="mini-stat-val" style="color:var(--c);">6</div><div class="mini-stat-lbl">CERTIFICATIONS</div></div>
-                    <div><div class="mini-stat-val" style="color:var(--p);">5+</div><div class="mini-stat-lbl">YEARS AGILE</div></div>
-                    <div><div class="mini-stat-val" style="color:var(--g);">157+</div><div class="mini-stat-lbl">STUDENTS</div></div>
+                    <div><div class="mini-stat-val" style="color:var(--c);">6</div><div class="mini-stat-lbl" data-i18n="stat.certs">CERTIFICATIONS</div></div>
+                    <div><div class="mini-stat-val" style="color:var(--p);">5+</div><div class="mini-stat-lbl" data-i18n="stat.years">YEARS AGILE</div></div>
+                    <div><div class="mini-stat-val" style="color:var(--g);">157+</div><div class="mini-stat-lbl" data-i18n="stat.students">STUDENTS</div></div>
                 </div>
             </div>
 
@@ -343,7 +347,7 @@
 
         </div>
     </div>
-    <div class="scroll-ind"><span>SCROLL</span><i class="fas fa-chevron-down" style="font-size:.65rem;"></i></div>
+    <div class="scroll-ind"><span data-i18n="scroll.txt">SCROLL</span><i class="fas fa-chevron-down" style="font-size:.65rem;"></i></div>
 </section>
 
 <!-- ABOUT -->
@@ -353,9 +357,9 @@
         <div class="grid md:grid-cols-2 gap-16 items-start">
 
             <div>
-                <div class="sec-lbl rv">CHAPTER 01 &bull; IDENTITY</div>
+                <div class="sec-lbl rv" data-i18n="about.lbl">CHAPTER 01 &bull; IDENTITY</div>
                 <div class="sec-div rv d1"></div>
-                <h2 class="sec-h rv d2" style="margin-top:6px;">
+                <h2 class="sec-h rv d2" data-i18n="about.h" style="margin-top:6px;">
                     AI innovator.<br>
                     <span class="grad-text">Agile leader.</span><br>
                     Tech educator.
@@ -363,24 +367,24 @@
             </div>
 
             <div style="display:flex;flex-direction:column;gap:22px;">
-                <p class="rv d1" style="font-size:1rem;line-height:1.88;color:rgba(255,255,255,.52);">
+                <p class="rv d1" data-i18n="about.p1" style="font-size:1rem;line-height:1.88;color:rgba(255,255,255,.52);">
                     AI entrepreneur with a Master's in Public Management from German University of Administrative Sciences Speyer. Currently building cutting-edge SaaS products as Founder of <span class="hi-c">AI Software Factory Ltd (London)</span>, serving as Senior Scrum Master at <span class="hi-g">Caucasus Auto Import</span>, and shaping future tech leaders as Assistant Professor at Alte University.
                 </p>
-                <p class="rv d2" style="font-size:1rem;line-height:1.88;color:rgba(255,255,255,.52);">
+                <p class="rv d2" data-i18n="about.p2" style="font-size:1rem;line-height:1.88;color:rgba(255,255,255,.52);">
                     Creator of <span class="hi-p">SmartBookly.com</span> &mdash; a fully functional all-in-one platform for medium and small businesses. 6 official Scrum.org certifications. Proven track record in AI development, Agile transformation, and technical education.
                 </p>
                 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);">
                     <div class="rv d3" style="text-align:center;">
                         <div class="stat-val" style="font-size:3.2rem;" data-count="6" data-suffix="">0</div>
-                        <div style="font-size:.65rem;letter-spacing:1.5px;color:rgba(255,255,255,.36);margin-top:6px;">CERTIFICATIONS</div>
+                        <div style="font-size:.65rem;letter-spacing:1.5px;color:rgba(255,255,255,.36);margin-top:6px;" data-i18n="stat.certs">CERTIFICATIONS</div>
                     </div>
                     <div class="rv d4" style="text-align:center;">
                         <div class="stat-val" style="font-size:3.2rem;" data-count="5" data-suffix="+">0</div>
-                        <div style="font-size:.65rem;letter-spacing:1.5px;color:rgba(255,255,255,.36);margin-top:6px;">YEARS AGILE</div>
+                        <div style="font-size:.65rem;letter-spacing:1.5px;color:rgba(255,255,255,.36);margin-top:6px;" data-i18n="stat.years">YEARS AGILE</div>
                     </div>
                     <div class="rv d5" style="text-align:center;">
                         <div class="stat-val" style="font-size:3.2rem;" data-count="157" data-suffix="+">0</div>
-                        <div style="font-size:.65rem;letter-spacing:1.5px;color:rgba(255,255,255,.36);margin-top:6px;">STUDENTS</div>
+                        <div style="font-size:.65rem;letter-spacing:1.5px;color:rgba(255,255,255,.36);margin-top:6px;" data-i18n="stat.students">STUDENTS</div>
                     </div>
                 </div>
             </div>
@@ -393,22 +397,22 @@
 <section id="journey" class="sec">
     <div class="wrap-md">
         <div style="margin-bottom:60px;">
-            <div class="sec-lbl rv">CHAPTER 02 &bull; EXPERIENCE</div>
+            <div class="sec-lbl rv" data-i18n="journey.lbl">CHAPTER 02 &bull; EXPERIENCE</div>
             <div class="sec-div rv d1"></div>
-            <h2 class="sec-h rv d2" style="margin-top:6px;">The Journey</h2>
+            <h2 class="sec-h rv d2" data-i18n="journey.h" style="margin-top:6px;">The Journey</h2>
         </div>
         <div style="display:flex;flex-direction:column;gap:44px;">
 
             <div class="tl-item rv">
                 <div class="tl-dot"><i class="fas fa-briefcase" style="color:var(--c);font-size:7px;"></i></div>
                 <div class="tl-card" style="margin-left:10px;">
-                    <div class="tl-date">JAN 2024 &mdash; PRESENT</div>
-                    <div class="tl-role">Senior Scrum Master</div>
-                    <div class="tl-co">Caucasus Auto Import &bull; Tbilisi</div>
+                    <div class="tl-date" data-i18n="j1.date">JAN 2024 &mdash; PRESENT</div>
+                    <div class="tl-role" data-i18n="j1.role">Senior Scrum Master</div>
+                    <div class="tl-co" data-i18n="j1.co">Caucasus Auto Import &bull; Tbilisi</div>
                     <ul style="display:flex;flex-direction:column;gap:9px;">
-                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> Implemented Scrum organization-wide</li>
-                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> Coached multiple teams &amp; leadership</li>
-                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> Built Agile culture &amp; processes</li>
+                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> <span data-i18n="j1.li1">Implemented Scrum organization-wide</span></li>
+                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> <span data-i18n="j1.li2">Coached multiple teams &amp; leadership</span></li>
+                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> <span data-i18n="j1.li3">Built Agile culture &amp; processes</span></li>
                     </ul>
                 </div>
             </div>
@@ -416,13 +420,13 @@
             <div class="tl-item rv d1">
                 <div class="tl-dot"><i class="fas fa-briefcase" style="color:var(--c);font-size:7px;"></i></div>
                 <div class="tl-card" style="margin-left:10px;">
-                    <div class="tl-date">MAR 2021 &mdash; JAN 2024</div>
-                    <div class="tl-role">Scrum Master</div>
-                    <div class="tl-co">Betsson Group</div>
+                    <div class="tl-date" data-i18n="j2.date">MAR 2021 &mdash; JAN 2024</div>
+                    <div class="tl-role" data-i18n="j2.role">Scrum Master</div>
+                    <div class="tl-co" data-i18n="j2.co">Betsson Group</div>
                     <ul style="display:flex;flex-direction:column;gap:9px;">
-                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> Facilitated all Scrum events</li>
-                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> Supported PO &amp; self-organizing teams</li>
-                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> Conflict resolution &amp; communication</li>
+                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> <span data-i18n="j2.li1">Facilitated all Scrum events</span></li>
+                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> <span data-i18n="j2.li2">Supported PO &amp; self-organizing teams</span></li>
+                        <li style="display:flex;gap:11px;font-size:.88rem;color:rgba(255,255,255,.55);"><span class="hi-c" style="flex-shrink:0;">&rarr;</span> <span data-i18n="j2.li3">Conflict resolution &amp; communication</span></li>
                     </ul>
                 </div>
             </div>
@@ -430,20 +434,20 @@
             <div class="tl-item rv d2">
                 <div class="tl-dot tl-dot-p"><i class="fas fa-rocket" style="color:var(--p);font-size:7px;"></i></div>
                 <div class="tl-card" style="margin-left:10px;border-color:rgba(139,92,246,.12);">
-                    <div class="tl-date" style="color:var(--p);">MAY 2025 &mdash; PRESENT</div>
-                    <div class="tl-role">Founder &amp; Director</div>
-                    <div class="tl-co">AI Software Factory Ltd &bull; London (Remote)</div>
-                    <p style="font-size:.88rem;color:rgba(255,255,255,.55);">AI-powered solutions built with elite Agile practices. Building the future of intelligent software.</p>
+                    <div class="tl-date" data-i18n="j3.date" style="color:var(--p);">MAY 2025 &mdash; PRESENT</div>
+                    <div class="tl-role" data-i18n="j3.role">Founder &amp; Director</div>
+                    <div class="tl-co" data-i18n="j3.co">AI Software Factory Ltd &bull; London (Remote)</div>
+                    <p data-i18n="j3.desc" style="font-size:.88rem;color:rgba(255,255,255,.55);">AI-powered solutions built with elite Agile practices. Building the future of intelligent software.</p>
                 </div>
             </div>
 
             <div class="tl-item rv d3">
                 <div class="tl-dot"><i class="fas fa-chalkboard-teacher" style="color:var(--c);font-size:7px;"></i></div>
                 <div class="tl-card" style="margin-left:10px;">
-                    <div class="tl-date">SEP 2022 &mdash; PRESENT</div>
-                    <div class="tl-role">Assistant Professor (IT Faculty)</div>
-                    <div class="tl-co">Alte University &bull; Tbilisi</div>
-                    <p style="font-size:.88rem;color:rgba(255,255,255,.55);">Blockchain &bull; Smart Contracts &bull; History of Technology</p>
+                    <div class="tl-date" data-i18n="j4.date">SEP 2022 &mdash; PRESENT</div>
+                    <div class="tl-role" data-i18n="j4.role">Assistant Professor (IT Faculty)</div>
+                    <div class="tl-co" data-i18n="j4.co">Alte University &bull; Tbilisi</div>
+                    <p data-i18n="j4.desc" style="font-size:.88rem;color:rgba(255,255,255,.55);">Blockchain &bull; Smart Contracts &bull; History of Technology</p>
                 </div>
             </div>
 
@@ -457,10 +461,10 @@
     <div class="wrap" style="position:relative;">
 
         <div style="text-align:center;margin-bottom:72px;">
-            <div class="sec-lbl sec-lbl-center rv">CHAPTER 03 &bull; INNOVATIONS</div>
+            <div class="sec-lbl sec-lbl-center rv" data-i18n="proj.lbl">CHAPTER 03 &bull; INNOVATIONS</div>
             <div class="sec-div sec-div-center rv d1"></div>
-            <h2 class="sec-h rv d2" style="margin-top:6px;">Featured Projects</h2>
-            <p class="rv d3" style="color:rgba(255,255,255,.38);margin-top:10px;">Building the future with AI-powered solutions</p>
+            <h2 class="sec-h rv d2" data-i18n="proj.h" style="margin-top:6px;">Featured Projects</h2>
+            <p class="rv d3" data-i18n="proj.sub" style="color:rgba(255,255,255,.38);margin-top:10px;">Building the future with AI-powered solutions</p>
         </div>
 
         <!-- SmartBookly -->
@@ -469,7 +473,7 @@
                 <div>
                     <div style="display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:10px;">
                         <h3 class="hd" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;background:linear-gradient(135deg,var(--p),var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">SmartBookly</h3>
-                        <span class="mono" style="padding:4px 12px;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.28);border-radius:100px;font-size:.62rem;letter-spacing:2px;color:#10b981;">LIVE &amp; FUNCTIONAL</span>
+                        <span class="mono" data-i18n="sb.live" style="padding:4px 12px;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.28);border-radius:100px;font-size:.62rem;letter-spacing:2px;color:#10b981;">LIVE &amp; FUNCTIONAL</span>
                     </div>
                     <a href="https://smartbookly.com" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;color:var(--p);font-size:.88rem;text-decoration:none;opacity:.75;transition:opacity .3s;">
                         smartbookly.com <i class="fas fa-external-link-alt" style="font-size:.72rem;"></i>
@@ -477,26 +481,26 @@
                 </div>
                 <div class="float-el" style="font-size:3.5rem;line-height:1;">&#x1F680;</div>
             </div>
-            <p style="font-size:1.05rem;color:rgba(255,255,255,.55);line-height:1.75;max-width:820px;margin-bottom:32px;">
+            <p data-i18n="sb.desc" style="font-size:1.05rem;color:rgba(255,255,255,.55);line-height:1.75;max-width:820px;margin-bottom:32px;">
                 All-in-one SaaS platform revolutionizing business management for small and medium businesses with AI-driven automation and real-time analytics.
             </p>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px;margin-bottom:28px;">
-                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4BC;</div><div style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Business Management</div><p style="font-size:.74rem;color:rgba(255,255,255,.38);">Complete CRM, invoicing &amp; client management</p></div>
-                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4CA;</div><div style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Analytics &amp; Insights</div><p style="font-size:.74rem;color:rgba(255,255,255,.38);">Real-time dashboards &amp; business intelligence</p></div>
-                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F916;</div><div style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">AI-Powered</div><p style="font-size:.74rem;color:rgba(255,255,255,.38);">Intelligent automation &amp; smart recommendations</p></div>
-                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4C5;</div><div style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Scheduling System</div><p style="font-size:.74rem;color:rgba(255,255,255,.38);">Automated booking &amp; appointment management</p></div>
-                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4B3;</div><div style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Payment Processing</div><p style="font-size:.74rem;color:rgba(255,255,255,.38);">Integrated payment gateway &amp; billing automation</p></div>
-                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4F1;</div><div style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Multi-Platform</div><p style="font-size:.74rem;color:rgba(255,255,255,.38);">Responsive design for web, tablet &amp; mobile</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4BC;</div><div data-i18n="sb.f1t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Business Management</div><p data-i18n="sb.f1d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Complete CRM, invoicing &amp; client management</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4CA;</div><div data-i18n="sb.f2t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Analytics &amp; Insights</div><p data-i18n="sb.f2d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Real-time dashboards &amp; business intelligence</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F916;</div><div data-i18n="sb.f3t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">AI-Powered</div><p data-i18n="sb.f3d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Intelligent automation &amp; smart recommendations</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4C5;</div><div data-i18n="sb.f4t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Scheduling System</div><p data-i18n="sb.f4d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Automated booking &amp; appointment management</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4B3;</div><div data-i18n="sb.f5t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Payment Processing</div><p data-i18n="sb.f5d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Integrated payment gateway &amp; billing automation</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4F1;</div><div data-i18n="sb.f6t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Multi-Platform</div><p data-i18n="sb.f6d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Responsive design for web, tablet &amp; mobile</p></div>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;">
-                <span class="tag">Full-Stack Development</span>
-                <span class="tag">AI Integration</span>
-                <span class="tag">SaaS Architecture</span>
-                <span class="tag">Cloud Infrastructure</span>
-                <span class="tag">Agile Development</span>
+                <span class="tag" data-i18n="tag.fs">Full-Stack Development</span>
+                <span class="tag" data-i18n="tag.ai">AI Integration</span>
+                <span class="tag" data-i18n="tag.sa">SaaS Architecture</span>
+                <span class="tag" data-i18n="tag.ci">Cloud Infrastructure</span>
+                <span class="tag" data-i18n="tag.ad">Agile Development</span>
             </div>
             <div style="padding:22px;background:rgba(139,92,246,.04);border:1px solid rgba(139,92,246,.14);border-radius:8px;">
-                <p style="font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;">
+                <p data-i18n="sb.role" style="font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;">
                     <span class="hi-p" style="font-weight:600;">My Role:</span> Founder, Lead Developer &amp; Product Owner. Conceived, designed, and developed the entire platform from ground up. Applied Agile/Scrum methodologies throughout development. Successfully launched with an active user base and continuous feature releases.
                 </p>
             </div>
@@ -505,22 +509,22 @@
         <div class="grid sm:grid-cols-2 gap-5">
             <div class="proj-card proj-sm rv d1">
                 <div style="font-size:2.2rem;margin-bottom:18px;">&#x1F393;</div>
-                <h3 class="hd" style="font-size:1.35rem;font-weight:700;margin-bottom:11px;background:linear-gradient(135deg,var(--c),#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Blockchain Education</h3>
-                <p style="font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px;">Comprehensive curriculum for Blockchain, Smart Contracts, and History of Technology courses at Alte University.</p>
+                <h3 data-i18n="bc.h" class="hd" style="font-size:1.35rem;font-weight:700;margin-bottom:11px;background:linear-gradient(135deg,var(--c),#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Blockchain Education</h3>
+                <p data-i18n="bc.desc" style="font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px;">Comprehensive curriculum for Blockchain, Smart Contracts, and History of Technology courses at Alte University.</p>
                 <div style="display:flex;flex-wrap:wrap;gap:7px;">
-                    <span class="tag">Curriculum Design</span>
+                    <span class="tag" data-i18n="tag.cd">Curriculum Design</span>
                     <span class="tag">Web3</span>
-                    <span class="tag">Smart Contracts</span>
+                    <span class="tag" data-i18n="tag.sc">Smart Contracts</span>
                 </div>
             </div>
             <div class="proj-card proj-sm rv d2">
                 <div style="font-size:2.2rem;margin-bottom:18px;">&#x26A1;</div>
-                <h3 class="hd" style="font-size:1.35rem;font-weight:700;margin-bottom:11px;background:linear-gradient(135deg,var(--g),#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Agile Transformation</h3>
-                <p style="font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px;">Led organization-wide Scrum implementation at Caucasus Auto Import, achieving 40% average velocity increase.</p>
+                <h3 data-i18n="at.h" class="hd" style="font-size:1.35rem;font-weight:700;margin-bottom:11px;background:linear-gradient(135deg,var(--g),#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Agile Transformation</h3>
+                <p data-i18n="at.desc" style="font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px;">Led organization-wide Scrum implementation at Caucasus Auto Import, achieving 40% average velocity increase.</p>
                 <div style="display:flex;flex-wrap:wrap;gap:7px;">
-                    <span class="tag tag-g">Scrum Framework</span>
-                    <span class="tag tag-g">Team Coaching</span>
-                    <span class="tag tag-g">Process Optimization</span>
+                    <span class="tag tag-g" data-i18n="tag.sf">Scrum Framework</span>
+                    <span class="tag tag-g" data-i18n="tag.tc">Team Coaching</span>
+                    <span class="tag tag-g" data-i18n="tag.po">Process Optimization</span>
                 </div>
             </div>
         </div>
@@ -532,17 +536,17 @@
 <section id="expertise" class="sec">
     <div class="wrap">
         <div style="text-align:center;margin-bottom:72px;">
-            <div class="sec-lbl sec-lbl-center rv">CHAPTER 04 &bull; CERTIFIED EXCELLENCE</div>
+            <div class="sec-lbl sec-lbl-center rv" data-i18n="exp.lbl">CHAPTER 04 &bull; CERTIFIED EXCELLENCE</div>
             <div class="sec-div sec-div-center rv d1"></div>
-            <h2 class="sec-h rv d2" style="margin-top:6px;">Expertise &amp; Accreditations</h2>
+            <h2 class="sec-h rv d2" data-i18n="exp.h" style="margin-top:6px;">Expertise &amp; Accreditations</h2>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;">
-            <div class="cert-card rv"><div class="cert-icon">&#x1F3C6;</div><div class="cert-name">Professional Scrum Master II</div><div class="cert-org">Scrum.org &bull; 2023</div><div class="cert-desc">Advanced coaching &amp; organizational agility</div></div>
-            <div class="cert-card rv d1"><div class="cert-icon">&#x1F4E6;</div><div class="cert-name">Professional Scrum Product Owner I</div><div class="cert-org">Scrum.org &bull; Oct 2023</div><div class="cert-desc">Product vision &amp; value maximization</div></div>
-            <div class="cert-card rv d2"><div class="cert-icon">&#x1F31F;</div><div class="cert-name">PAL I &bull; PSK I</div><div class="cert-org">Scrum.org &bull; 2023-2024</div><div class="cert-desc">Agile Leadership + Kanban</div></div>
-            <div class="cert-card rv d3"><div class="cert-icon">&#x1F9E0;</div><div class="cert-name">AI &amp; Machine Learning</div><div class="cert-org">Continuous Learning</div><div class="cert-desc">Applied AI development &amp; SaaS architecture</div></div>
-            <div class="cert-card rv d4"><div class="cert-icon">&#x26D3;&#xFE0F;</div><div class="cert-name">Blockchain &amp; Web3</div><div class="cert-org">Academic Expertise</div><div class="cert-desc">Smart contracts, DeFi &amp; distributed systems</div></div>
-            <div class="cert-card rv d5"><div class="cert-icon">&#x1F393;</div><div class="cert-name">Master's Degree</div><div class="cert-org">Uni. Speyer &bull; Germany</div><div class="cert-desc">Public Management &amp; Governance</div></div>
+            <div class="cert-card rv"><div class="cert-icon">&#x1F3C6;</div><div class="cert-name" data-i18n="c1n">Professional Scrum Master II</div><div class="cert-org" data-i18n="c1o">Scrum.org &bull; 2023</div><div class="cert-desc" data-i18n="c1d">Advanced coaching &amp; organizational agility</div></div>
+            <div class="cert-card rv d1"><div class="cert-icon">&#x1F4E6;</div><div class="cert-name" data-i18n="c2n">Professional Scrum Product Owner I</div><div class="cert-org" data-i18n="c2o">Scrum.org &bull; Oct 2023</div><div class="cert-desc" data-i18n="c2d">Product vision &amp; value maximization</div></div>
+            <div class="cert-card rv d2"><div class="cert-icon">&#x1F31F;</div><div class="cert-name" data-i18n="c3n">PAL I &bull; PSK I</div><div class="cert-org" data-i18n="c3o">Scrum.org &bull; 2023-2024</div><div class="cert-desc" data-i18n="c3d">Agile Leadership + Kanban</div></div>
+            <div class="cert-card rv d3"><div class="cert-icon">&#x1F9E0;</div><div class="cert-name" data-i18n="c4n">AI &amp; Machine Learning</div><div class="cert-org" data-i18n="c4o">Continuous Learning</div><div class="cert-desc" data-i18n="c4d">Applied AI development &amp; SaaS architecture</div></div>
+            <div class="cert-card rv d4"><div class="cert-icon">&#x26D3;&#xFE0F;</div><div class="cert-name" data-i18n="c5n">Blockchain &amp; Web3</div><div class="cert-org" data-i18n="c5o">Academic Expertise</div><div class="cert-desc" data-i18n="c5d">Smart contracts, DeFi &amp; distributed systems</div></div>
+            <div class="cert-card rv d5"><div class="cert-icon">&#x1F393;</div><div class="cert-name" data-i18n="c6n">Master's Degree</div><div class="cert-org" data-i18n="c6o">Uni. Speyer &bull; Germany</div><div class="cert-desc" data-i18n="c6d">Public Management &amp; Governance</div></div>
         </div>
     </div>
 </section>
@@ -553,15 +557,15 @@
     <div class="deco-bg-text">IMPACT</div>
     <div class="wrap" style="position:relative;">
         <div style="text-align:center;margin-bottom:72px;">
-            <div class="sec-lbl sec-lbl-center rv">CHAPTER 05 &bull; METRICS</div>
+            <div class="sec-lbl sec-lbl-center rv" data-i18n="imp.lbl">CHAPTER 05 &bull; METRICS</div>
             <div class="sec-div sec-div-center rv d1"></div>
-            <h2 class="sec-h rv d2" style="margin-top:6px;">Real Impact</h2>
+            <h2 class="sec-h rv d2" data-i18n="imp.h" style="margin-top:6px;">Real Impact</h2>
         </div>
         <div style="display:grid;grid-template-columns:repeat(2,1fr);" class="md:grid-cols-4">
-            <div class="impact-cell ic-p rv"><div class="impact-num" style="color:var(--p);" data-count="1" data-suffix="">0</div><div class="impact-lbl">LIVE SAAS PRODUCT</div></div>
-            <div class="impact-cell ic-c rv d1"><div class="impact-num" style="color:var(--c);" data-count="5" data-suffix="+">0</div><div class="impact-lbl">YEARS AGILE LEADERSHIP</div></div>
-            <div class="impact-cell ic-g rv d2"><div class="impact-num" style="color:var(--g);" data-count="157" data-suffix="+">0</div><div class="impact-lbl">STUDENTS MENTORED</div></div>
-            <div class="impact-cell ic-pk rv d3"><div class="impact-num" style="color:var(--pk);" data-count="40" data-suffix="%">0</div><div class="impact-lbl">AVG VELOCITY INCREASE</div></div>
+            <div class="impact-cell ic-p rv"><div class="impact-num" style="color:var(--p);" data-count="1" data-suffix="">0</div><div class="impact-lbl" data-i18n="imp.l1">LIVE SAAS PRODUCT</div></div>
+            <div class="impact-cell ic-c rv d1"><div class="impact-num" style="color:var(--c);" data-count="5" data-suffix="+">0</div><div class="impact-lbl" data-i18n="imp.l2">YEARS AGILE LEADERSHIP</div></div>
+            <div class="impact-cell ic-g rv d2"><div class="impact-num" style="color:var(--g);" data-count="157" data-suffix="+">0</div><div class="impact-lbl" data-i18n="imp.l3">STUDENTS MENTORED</div></div>
+            <div class="impact-cell ic-pk rv d3"><div class="impact-num" style="color:var(--pk);" data-count="40" data-suffix="%">0</div><div class="impact-lbl" data-i18n="imp.l4">AVG VELOCITY INCREASE</div></div>
         </div>
     </div>
 </section>
@@ -569,9 +573,9 @@
 <!-- CONTACT -->
 <section id="contact" class="sec" style="padding-bottom:72px;">
     <div class="wrap-sm" style="text-align:center;">
-        <div class="sec-lbl sec-lbl-center rv" style="margin-bottom:14px;">FINAL CHAPTER</div>
+        <div class="sec-lbl sec-lbl-center rv" data-i18n="con.lbl" style="margin-bottom:14px;">FINAL CHAPTER</div>
         <div class="sec-div sec-div-center rv d1"></div>
-        <h2 class="sec-h rv d2" style="font-size:clamp(2.2rem,5.5vw,4.5rem);letter-spacing:-3px;line-height:1.05;margin:16px 0 44px;">
+        <h2 class="sec-h rv d2" data-i18n="con.h" style="font-size:clamp(2.2rem,5.5vw,4.5rem);letter-spacing:-3px;line-height:1.05;margin:16px 0 44px;">
             Ready to accelerate<br><span class="grad-text">your next project?</span>
         </h2>
         <div class="rv d3">
@@ -582,9 +586,9 @@
         </div>
         <div class="rv d5" style="display:flex;justify-content:center;gap:16px;margin-top:52px;">
             <a href="https://www.linkedin.com/in/anania-devsurashvili/" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/c/AnaniaDevsurashvili" target="_blank" rel="noopener noreferrer" class="soc-btn soc-yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/Homelander3939" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
-        <p class="rv mono" style="font-size:.72rem;color:rgba(255,255,255,.18);margin-top:72px;letter-spacing:1px;">&copy; 2026 Anania Devsurashvili &bull; Made with futuristic love in Georgia &#x1F1EC;&#x1F1EA;</p>
+        <p class="rv mono" data-i18n="con.footer" style="font-size:.72rem;color:rgba(255,255,255,.18);margin-top:72px;letter-spacing:1px;">&copy; 2026 Anania Devsurashvili &bull; Made with futuristic love in Georgia &#x1F1EC;&#x1F1EA;</p>
     </div>
 </section>
 
@@ -594,6 +598,161 @@
 </button>
 
 <script>
+/* TRANSLATIONS */
+var currentLang='en';
+var i18n={
+  en:{
+    'pl.init':'INITIALIZING PORTFOLIO',
+    'nav.about':'ABOUT','nav.journey':'JOURNEY','nav.projects':'PROJECTS',
+    'nav.expertise':'EXPERTISE','nav.impact':'IMPACT','nav.contact':'CONTACT',
+    'nav.hire':'<i class="fas fa-envelope" style="font-size:.72rem;"></i> HIRE ME',
+    'scroll.txt':'SCROLL',
+    'hero.badge':'<div class="sdot"></div>OPEN TO SPEAKING &amp; CONSULTING',
+    'hero.desc':'Founder @ AI Software Factory &bull; PSM II Certified<br>Building AI-powered SaaS &bull; Mentoring 157+ students &bull; Transforming teams',
+    'hero.cta1':'LET\'S COLLABORATE <i class="fas fa-arrow-right" style="font-size:.72rem;"></i>',
+    'hero.cta2':'VIEW JOURNEY <i class="fas fa-chevron-down" style="font-size:.72rem;"></i>',
+    'stat.certs':'CERTIFICATIONS','stat.years':'YEARS AGILE','stat.students':'STUDENTS',
+    'about.lbl':'CHAPTER 01 &bull; IDENTITY',
+    'about.h':'AI innovator.<br><span class="grad-text">Agile leader.</span><br>Tech educator.',
+    'about.p1':'AI entrepreneur with a Master\'s in Public Management from German University of Administrative Sciences Speyer. Currently building cutting-edge SaaS products as Founder of <span class="hi-c">AI Software Factory Ltd (London)</span>, serving as Senior Scrum Master at <span class="hi-g">Caucasus Auto Import</span>, and shaping future tech leaders as Assistant Professor at Alte University.',
+    'about.p2':'Creator of <span class="hi-p">SmartBookly.com</span> &mdash; a fully functional all-in-one platform for medium and small businesses. 6 official Scrum.org certifications. Proven track record in AI development, Agile transformation, and technical education.',
+    'journey.lbl':'CHAPTER 02 &bull; EXPERIENCE','journey.h':'The Journey',
+    'j1.date':'JAN 2024 &mdash; PRESENT','j1.role':'Senior Scrum Master',
+    'j1.co':'Caucasus Auto Import &bull; Tbilisi',
+    'j1.li1':'Implemented Scrum organization-wide',
+    'j1.li2':'Coached multiple teams &amp; leadership',
+    'j1.li3':'Built Agile culture &amp; processes',
+    'j2.date':'MAR 2021 &mdash; JAN 2024','j2.role':'Scrum Master','j2.co':'Betsson Group',
+    'j2.li1':'Facilitated all Scrum events',
+    'j2.li2':'Supported PO &amp; self-organizing teams',
+    'j2.li3':'Conflict resolution &amp; communication',
+    'j3.date':'MAY 2025 &mdash; PRESENT','j3.role':'Founder &amp; Director',
+    'j3.co':'AI Software Factory Ltd &bull; London (Remote)',
+    'j3.desc':'AI-powered solutions built with elite Agile practices. Building the future of intelligent software.',
+    'j4.date':'SEP 2022 &mdash; PRESENT','j4.role':'Assistant Professor (IT Faculty)',
+    'j4.co':'Alte University &bull; Tbilisi',
+    'j4.desc':'Blockchain &bull; Smart Contracts &bull; History of Technology',
+    'proj.lbl':'CHAPTER 03 &bull; INNOVATIONS','proj.h':'Featured Projects',
+    'proj.sub':'Building the future with AI-powered solutions',
+    'sb.live':'LIVE &amp; FUNCTIONAL',
+    'sb.desc':'All-in-one SaaS platform revolutionizing business management for small and medium businesses with AI-driven automation and real-time analytics.',
+    'sb.f1t':'Business Management','sb.f1d':'Complete CRM, invoicing &amp; client management',
+    'sb.f2t':'Analytics &amp; Insights','sb.f2d':'Real-time dashboards &amp; business intelligence',
+    'sb.f3t':'AI-Powered','sb.f3d':'Intelligent automation &amp; smart recommendations',
+    'sb.f4t':'Scheduling System','sb.f4d':'Automated booking &amp; appointment management',
+    'sb.f5t':'Payment Processing','sb.f5d':'Integrated payment gateway &amp; billing automation',
+    'sb.f6t':'Multi-Platform','sb.f6d':'Responsive design for web, tablet &amp; mobile',
+    'tag.fs':'Full-Stack Development','tag.ai':'AI Integration','tag.sa':'SaaS Architecture',
+    'tag.ci':'Cloud Infrastructure','tag.ad':'Agile Development',
+    'tag.cd':'Curriculum Design','tag.sc':'Smart Contracts',
+    'tag.sf':'Scrum Framework','tag.tc':'Team Coaching','tag.po':'Process Optimization',
+    'sb.role':'<span class="hi-p" style="font-weight:600;">My Role:</span> Founder, Lead Developer &amp; Product Owner. Conceived, designed, and developed the entire platform from ground up. Applied Agile/Scrum methodologies throughout development. Successfully launched with an active user base and continuous feature releases.',
+    'bc.h':'Blockchain Education',
+    'bc.desc':'Comprehensive curriculum for Blockchain, Smart Contracts, and History of Technology courses at Alte University.',
+    'at.h':'Agile Transformation',
+    'at.desc':'Led organization-wide Scrum implementation at Caucasus Auto Import, achieving 40% average velocity increase.',
+    'exp.lbl':'CHAPTER 04 &bull; CERTIFIED EXCELLENCE','exp.h':'Expertise &amp; Accreditations',
+    'c1n':'Professional Scrum Master II','c1o':'Scrum.org &bull; 2023','c1d':'Advanced coaching &amp; organizational agility',
+    'c2n':'Professional Scrum Product Owner I','c2o':'Scrum.org &bull; Oct 2023','c2d':'Product vision &amp; value maximization',
+    'c3n':'PAL I &bull; PSK I','c3o':'Scrum.org &bull; 2023-2024','c3d':'Agile Leadership + Kanban',
+    'c4n':'AI &amp; Machine Learning','c4o':'Continuous Learning','c4d':'Applied AI development &amp; SaaS architecture',
+    'c5n':'Blockchain &amp; Web3','c5o':'Academic Expertise','c5d':'Smart contracts, DeFi &amp; distributed systems',
+    'c6n':"Master's Degree",'c6o':'Uni. Speyer &bull; Germany','c6d':'Public Management &amp; Governance',
+    'imp.lbl':'CHAPTER 05 &bull; METRICS','imp.h':'Real Impact',
+    'imp.l1':'LIVE SAAS PRODUCT','imp.l2':'YEARS AGILE LEADERSHIP',
+    'imp.l3':'STUDENTS MENTORED','imp.l4':'AVG VELOCITY INCREASE',
+    'con.lbl':'FINAL CHAPTER',
+    'con.h':'Ready to accelerate<br><span class="grad-text">your next project?</span>',
+    'con.footer':'&copy; 2026 Anania Devsurashvili &bull; Made with futuristic love in Georgia &#x1F1EC;&#x1F1EA;',
+    'typedPhrases':['AI Entrepreneur','Senior Scrum Master','Tech Educator','Founder @ AI Software Factory','PSM II Certified','Blockchain Lecturer']
+  },
+  ka:{
+    'pl.init':'პორტფოლიო იტვირთება',
+    'nav.about':'ჩემ შეს','nav.journey':'გამოცდ.','nav.projects':'პროექ.',
+    'nav.expertise':'ექსპ.','nav.impact':'გავლენა','nav.contact':'კონტაქტი',
+    'nav.hire':'<i class="fas fa-envelope" style="font-size:.72rem;"></i> დამიქირავე',
+    'scroll.txt':'გადახვევა',
+    'hero.badge':'<div class="sdot"></div>კონსულტ. &amp; ლექციებზე ხელმისაწვდ.',
+    'hero.desc':'დამფ. @ AI Software Factory &bull; PSM II სერტ.<br>AI SaaS &bull; 157+ სტუდ. მენტ. &bull; გუნდ. ტრანსფ.',
+    'hero.cta1':'ვითანამშრომლოთ <i class="fas fa-arrow-right" style="font-size:.72rem;"></i>',
+    'hero.cta2':'ნახეთ გამოცდ. <i class="fas fa-chevron-down" style="font-size:.72rem;"></i>',
+    'stat.certs':'სერტიფიკ.','stat.years':'წ. AGILE','stat.students':'სტუდენტ.',
+    'about.lbl':'თავი 01 &bull; ვინაობა',
+    'about.h':'AI ინოვატორი.<br><span class="grad-text">Agile ლიდერი.</span><br>ტექ პედაგოგი.',
+    'about.p1':'AI მეწარმე, საჯარო მართვის მაგისტრი გერმ. ადმ. მეც. უნივ. Speyer-იდან. ავითარებს SaaS პროდ. <span class="hi-c">AI Software Factory Ltd (ლონდ.)</span>-ის დამფ.-ად, Senior Scrum Master-ია <span class="hi-g">Caucasus Auto Import</span>-ში და ამზ. ტექ-ლიდ. Alte University-ში.',
+    'about.p2':'<span class="hi-p">SmartBookly.com</span>-ის შემქმნელი &mdash; all-in-one პლატფ. მცირე &amp; საშ. ბიზნ. 6 ოფ. Scrum.org სერტ. დასაბ. გამ. AI-ში, Agile ტრ-სა და ტექ. განათ-ში.',
+    'journey.lbl':'თავი 02 &bull; გამოცდილება','journey.h':'გამოცდილება',
+    'j1.date':'იანვ 2024 &mdash; დღეს','j1.role':'Senior Scrum Master',
+    'j1.co':'Caucasus Auto Import &bull; თბილისი',
+    'j1.li1':'Scrum-ი ორგ. მასშტ. დანერგა',
+    'j1.li2':'გუნდებსა &amp; ლიდ. ამზადებდა',
+    'j1.li3':'Agile კულტ. &amp; პროც. ააგო',
+    'j2.date':'მარ 2021 &mdash; იანვ 2024','j2.role':'Scrum Master','j2.co':'Betsson Group',
+    'j2.li1':'ყველა Scrum ღონ. ხელ. შეუწყო',
+    'j2.li2':'PO &amp; თვ.-ორგ. გუნდ. მხარდ.',
+    'j2.li3':'კონფლ. მოგვ. &amp; კომ.',
+    'j3.date':'მაი 2025 &mdash; დღეს','j3.role':'დამფუძნებელი &amp; დირექტორი',
+    'j3.co':'AI Software Factory Ltd &bull; ლონდ. (დისტ.)',
+    'j3.desc':'AI-ზე დაფ. გადაწყვ., ელიტ. Agile პრ. ინტელ. პროგ. მომ. შ.',
+    'j4.date':'სექტ 2022 &mdash; დღეს','j4.role':'ასისტ.-პროფ. (IT ფაკ.)',
+    'j4.co':'Alte University &bull; თბილისი',
+    'j4.desc':'ბლოკჩეინი &bull; ჭკვ. კონტ. &bull; ტექ-ის ისტ.',
+    'proj.lbl':'თავი 03 &bull; ინოვაციები','proj.h':'გამ. პროექტები',
+    'proj.sub':'AI-ზე დაფ. გადაწყვ.-ებ. მომ. შ.',
+    'sb.live':'LIVE &amp; ფუნქც.',
+    'sb.desc':'All-in-one SaaS პლ., ბიზ. მართ. ინოვ. მცირე &amp; საშ. ბიზ. AI ავტომ. &amp; რეალ.-დ. ანალ.',
+    'sb.f1t':'ბიზ. მართვა','sb.f1d':'CRM, ინვ. &amp; კლ. მართ.',
+    'sb.f2t':'ანალ. &amp; ინფ.','sb.f2d':'რეალ.-დ. დაფ. &amp; ბ. ინტ.',
+    'sb.f3t':'AI-ზე დ.','sb.f3d':'ინტ. ავტომ. &amp; ჭ. რეკ.',
+    'sb.f4t':'დაჯ. სისტ.','sb.f4d':'ავტ. ჯავ. &amp; შეხვ. მართ.',
+    'sb.f5t':'გად. დამ.','sb.f5d':'ინტ. გ. კარ. &amp; ბილ. ავ.',
+    'sb.f6t':'მრ.-პლ.','sb.f6d':'რეაგ. დ. ვებ, ტ. &amp; მობ.',
+    'tag.fs':'Full-Stack Dev.','tag.ai':'AI ინტ.','tag.sa':'SaaS არქ.',
+    'tag.ci':'ღ. ინფ.','tag.ad':'Agile განვ.',
+    'tag.cd':'პროგ. დიზ.','tag.sc':'ჭკვ. კონტ.',
+    'tag.sf':'Scrum ჩარჩო','tag.tc':'გუნდ. კოუჩ.','tag.po':'პრ. ოპტ.',
+    'sb.role':'<span class="hi-p" style="font-weight:600;">ჩემი როლი:</span> დამფ., Lead Dev &amp; PO. ნულ. დ. შ. გ. &amp; ა. Agile/Scrum. წ. გ. ა. ბ. მომხ.-ებ.',
+    'bc.h':'ბლოკჩეინ. განათ.',
+    'bc.desc':'ბლ., ჭ. კ. &amp; ტ. ის. კ. Alte University-ში.',
+    'at.h':'Agile ტრანსფ.',
+    'at.desc':'Scrum ორგ. დ. C. A. I.-ში, საშ. 40%-ით გაზ. სიჩ.',
+    'exp.lbl':'თ. 04 &bull; სერტ. ბრწყ.','exp.h':'ექსპ. &amp; სერტ.',
+    'c1n':'Professional Scrum Master II','c1o':'Scrum.org &bull; 2023','c1d':'მ. კოუჩ. &amp; ორგ. სისწ.',
+    'c2n':'Professional Scrum Product Owner I','c2o':'Scrum.org &bull; ოქტ 2023','c2d':'პ. ხედ. &amp; ღ. მაქს.',
+    'c3n':'PAL I &bull; PSK I','c3o':'Scrum.org &bull; 2023-2024','c3d':'Agile ლ. + Kanban',
+    'c4n':'AI &amp; მ. სწ.','c4o':'უწყვ. სწ.','c4d':'AI განვ. &amp; SaaS არქ.',
+    'c5n':'ბლ. &amp; Web3','c5o':'აკ. ექსპ.','c5d':'ჭ. კ., DeFi &amp; გ. სის.',
+    'c6n':'მაგ. ხარ.','c6o':'Uni. Speyer &bull; გერმ.','c6d':'საჯ. მ. &amp; მმ.',
+    'imp.lbl':'თავი 05 &bull; მეტრიკა','imp.h':'რეალური გავლენა',
+    'imp.l1':'LIVE SaaS პ.','imp.l2':'წ. AGILE ლ.',
+    'imp.l3':'სტ. მენტ.','imp.l4':'საშ. სიჩ. ზ.',
+    'con.lbl':'ბოლო თავი',
+    'con.h':'მზადა დავაჩქარო<br><span class="grad-text">თქვენი შემდეგი პრ.?</span>',
+    'con.footer':'&copy; 2026 ანანია დევსურაშვილი &bull; შექ. სიყვ. საქართველოში &#x1F1EC;&#x1F1EA;',
+    'typedPhrases':['AI მეწარმე','Senior Scrum Master','ტექ პედაგოგი','დამფ. @ AI Software Factory','PSM II სერტ.','ბლოკჩეინის ლექტ.']
+  }
+};
+
+function setLang(lang){
+  currentLang=lang;
+  try{localStorage.setItem('portfolio_lang',lang);}catch(e){}
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var key=el.getAttribute('data-i18n');
+    if(i18n[lang]&&i18n[lang][key]!==undefined){el.innerHTML=i18n[lang][key];}
+  });
+  document.documentElement.lang=lang;
+  var btn=document.getElementById('langBtn');
+  var btnM=document.getElementById('langBtnMob');
+  if(btn)btn.textContent=lang==='en'?'KA':'EN';
+  if(btnM)btnM.textContent=lang==='en'?'KA':'EN';
+  typedPhrases=i18n[lang].typedPhrases;
+  typedIdx=0;typedChar=0;typedDel=false;
+  var te=document.getElementById('typedEl');
+  if(te)te.textContent='';
+  clearTimeout(typedTimer);
+  typedTimer=setTimeout(runTyped,400);
+}
+
 /* CANVAS — Particle Network */
 (function(){
     var C=document.getElementById('bgCanvas'),ctx=C.getContext('2d'),W,H,pts=[],mx=-9999,my=-9999;
@@ -642,12 +801,16 @@ function toggleMenu(){
 }
 
 /* TYPEWRITER */
-(function(){
-    var phrases=['AI Entrepreneur','Senior Scrum Master','Tech Educator','Founder @ AI Software Factory','PSM II Certified','Blockchain Lecturer'],
-        el=document.getElementById('typedEl'),pi=0,ci=0,del=false;
-    function type(){var ph=phrases[pi];if(!del){el.textContent=ph.substring(0,++ci);if(ci>=ph.length){setTimeout(function(){del=true;type();},2200);return;}setTimeout(type,62);}else{el.textContent=ph.substring(0,--ci);if(ci<=0){del=false;pi=(pi+1)%phrases.length;setTimeout(type,400);return;}setTimeout(type,32);}}
-    setTimeout(type,2100);
-})();
+var typedPhrases=i18n['en'].typedPhrases;
+var typedIdx=0,typedChar=0,typedDel=false,typedTimer=null;
+function runTyped(){
+    var el=document.getElementById('typedEl');
+    if(!el)return;
+    var ph=typedPhrases[typedIdx];
+    if(!typedDel){el.textContent=ph.substring(0,++typedChar);if(typedChar>=ph.length){typedTimer=setTimeout(function(){typedDel=true;runTyped();},2200);return;}typedTimer=setTimeout(runTyped,62);}
+    else{el.textContent=ph.substring(0,--typedChar);if(typedChar<=0){typedDel=false;typedIdx=(typedIdx+1)%typedPhrases.length;typedTimer=setTimeout(runTyped,400);return;}typedTimer=setTimeout(runTyped,32);}
+}
+typedTimer=setTimeout(runTyped,2100);
 
 /* SCROLL REVEAL */
 (function(){
@@ -664,6 +827,12 @@ function toggleMenu(){
 
 /* SMOOTH SCROLL */
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=this.getAttribute('href');if(h!=='#'){e.preventDefault();var t=document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth'});}});});
+
+/* LANGUAGE INIT */
+(function(){
+    var saved;try{saved=localStorage.getItem('portfolio_lang');}catch(e){}
+    if(saved&&saved!=='en')setLang(saved);
+})();
 </script>
 </body>
 </html>
