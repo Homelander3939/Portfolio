@@ -90,6 +90,7 @@
         .or2{width:525px;height:525px;margin-left:-263px;margin-top:-263px;animation-duration:16s;animation-direction:reverse;border-color:rgba(139,92,246,.18);}
         .or3{width:600px;height:600px;margin-left:-300px;margin-top:-300px;animation-duration:24s;border-color:rgba(251,191,36,.12);}
         @media(max-width:1024px){.or1{width:375px;height:375px;margin-left:-188px;margin-top:-188px;}.or2{width:440px;height:440px;margin-left:-220px;margin-top:-220px;}.or3{width:500px;height:500px;margin-left:-250px;margin-top:-250px;}}
+        @media(max-width:767px){.orbit-wrap{width:200px;height:200px;}.or1{width:260px;height:260px;margin-left:-130px;margin-top:-130px;}.or2{width:310px;height:310px;margin-left:-155px;margin-top:-155px;}.or3{width:355px;height:355px;margin-left:-178px;margin-top:-178px;}.loc-chip{right:-18px;bottom:-12px;padding:8px 12px;}.loc-chip div:first-of-type{font-size:.7rem!important;}.loc-chip .mono{font-size:.6rem!important;}}
         .orbit-dot{position:absolute;top:-4px;left:50%;transform:translateX(-50%);width:8px;height:8px;border-radius:50%;}
         .od-c{background:var(--c);box-shadow:0 0 10px var(--c),0 0 20px var(--c);}
         .od-p{background:var(--p);box-shadow:0 0 10px var(--p),0 0 20px var(--p);}
@@ -318,12 +319,6 @@
             <!-- LEFT -->
             <div style="display:flex;flex-direction:column;gap:26px;">
 
-                <!-- Mobile photo -->
-                <div class="md:hidden flex justify-center" style="padding-bottom:10px;">
-                    <img src="https://i.ibb.co/ch9TpTxt/bItTm19KFj-1.jpg" alt="Anania Devsurashvili"
-                         style="width:200px;height:200px;border-radius:50%;object-fit:cover;border:3px solid rgba(0,245,255,.3);box-shadow:0 0 40px rgba(0,245,255,.18);">
-                </div>
-
                 <div class="rv"><div class="status-badge" data-i18n="hero.badge"><div class="sdot"></div>OPEN FOR CONSULTING &amp; COLLABORATION</div></div>
 
                 <div class="rv d1">
@@ -354,7 +349,7 @@
             </div>
 
             <!-- RIGHT: orbital photo -->
-            <div class="hidden md:flex justify-center items-center rv rv-r d2">
+            <div class="flex justify-center items-center rv rv-r d2 order-first md:order-none">
                 <div class="orbit-wrap">
                     <div class="orbit-ring or1"><div class="orbit-dot od-c"></div></div>
                     <div class="orbit-ring or2"><div class="orbit-dot od-p"></div></div>
