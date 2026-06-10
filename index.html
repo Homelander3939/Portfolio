@@ -283,7 +283,7 @@
         <div style="display:flex;align-items:center;gap:14px;">
             <button id="langBtn" class="lang-btn hidden md:flex" onclick="setLang(currentLang==='en'?'ka':'en')">KA</button>
             <a href="mailto:ananiadevsurashvili@gmail.com" class="hire-btn hidden md:flex" data-i18n="nav.hire">
-                <i class="fas fa-envelope" style="font-size:.72rem;"></i> HIRE ME
+                <i class="fas fa-handshake" style="font-size:.72rem;"></i> LET'S COLLABORATE
             </a>
             <button id="langBtnMobNav" class="lang-btn md:hidden" onclick="setLang(currentLang==='en'?'ka':'en')">KA</button>
             <button id="menuToggle" class="menu-btn md:hidden" onclick="toggleMenu()" aria-label="Menu">
@@ -305,7 +305,7 @@
         <a href="#expertise" onclick="toggleMenu()" class="mm-link" data-i18n="nav.expertise">EXPERTISE</a>
         <a href="#impact"    onclick="toggleMenu()" class="mm-link" data-i18n="nav.impact">IMPACT</a>
         <a href="#contact"   onclick="toggleMenu()" class="mm-link" data-i18n="nav.contact">CONTACT</a>
-        <a href="mailto:ananiadevsurashvili@gmail.com" data-i18n="nav.hire" style="margin-top:28px;padding:14px 36px;border:1px solid var(--c);color:var(--c);font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:2px;text-decoration:none;border-radius:4px;">HIRE ME</a>
+        <a href="mailto:ananiadevsurashvili@gmail.com" data-i18n="nav.hire" style="margin-top:28px;padding:14px 36px;border:1px solid var(--c);color:var(--c);font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:2px;text-decoration:none;border-radius:4px;">LET'S COLLABORATE</a>
         <button id="langBtnMob" class="lang-btn" onclick="setLang(currentLang==='en'?'ka':'en')" style="margin-top:18px;">KA</button>
     </div>
 </div>
@@ -409,6 +409,56 @@
                     <div class="rv d5" style="text-align:center;">
                         <div class="stat-val" style="font-size:3.2rem;" data-count="157" data-suffix="+">0</div>
                         <div style="font-size:.65rem;letter-spacing:1.5px;color:rgba(255,255,255,.36);margin-top:6px;" data-i18n="stat.students">STUDENTS</div>
+                    </div>
+                </div>
+
+                <!-- SKILLS & LANGUAGES -->
+                <div class="rv d4" style="padding-top:28px;border-top:1px solid rgba(255,255,255,.06);">
+                    <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-bottom:12px;" data-i18n="about.skills.lbl">SKILLS &amp; TOOLS</div>
+                    <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px;">
+                        <span class="tag">Scrum</span>
+                        <span class="tag">Kanban</span>
+                        <span class="tag">SAFe</span>
+                        <span class="tag">XP &amp; Lean</span>
+                        <span class="tag tag-p">Jira</span>
+                        <span class="tag tag-p">Confluence</span>
+                        <span class="tag tag-p">Miro</span>
+                        <span class="tag tag-p">Azure DevOps</span>
+                        <span class="tag tag-g">AI / ML</span>
+                        <span class="tag tag-g">SaaS</span>
+                        <span class="tag tag-g">Blockchain</span>
+                        <span class="tag tag-g">AWS</span>
+                        <span class="tag">Servant Leadership</span>
+                        <span class="tag">Team Coaching</span>
+                        <span class="tag">Facilitation</span>
+                        <span class="tag">Stakeholder Mgmt</span>
+                    </div>
+                    <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-bottom:12px;" data-i18n="about.langs.lbl">SPOKEN LANGUAGES</div>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <img src="https://flagcdn.com/w20/ge.png" alt="Georgian" style="width:1.15em;height:auto;border-radius:2px;">
+                            <span style="font-size:.82rem;color:rgba(255,255,255,.65);min-width:90px;" data-i18n="lang.ka">Georgian</span>
+                            <div style="flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;">
+                                <div style="width:100%;height:100%;background:linear-gradient(90deg,var(--c),var(--p));border-radius:3px;"></div>
+                            </div>
+                            <span class="mono" style="font-size:.65rem;color:rgba(255,255,255,.35);min-width:42px;text-align:right;" data-i18n="lang.ka.lv">Native</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English" style="width:1.15em;height:auto;border-radius:2px;">
+                            <span style="font-size:.82rem;color:rgba(255,255,255,.65);min-width:90px;" data-i18n="lang.en">English</span>
+                            <div style="flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;">
+                                <div style="width:92%;height:100%;background:linear-gradient(90deg,var(--c),var(--p));border-radius:3px;"></div>
+                            </div>
+                            <span class="mono" style="font-size:.65rem;color:rgba(255,255,255,.35);min-width:42px;text-align:right;" data-i18n="lang.en.lv">Fluent</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <img src="https://flagcdn.com/w20/de.png" alt="German" style="width:1.15em;height:auto;border-radius:2px;">
+                            <span style="font-size:.82rem;color:rgba(255,255,255,.65);min-width:90px;" data-i18n="lang.de">German</span>
+                            <div style="flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;">
+                                <div style="width:72%;height:100%;background:linear-gradient(90deg,var(--p),var(--pk));border-radius:3px;"></div>
+                            </div>
+                            <span class="mono" style="font-size:.65rem;color:rgba(255,255,255,.35);min-width:42px;text-align:right;" data-i18n="lang.de.lv">Professional</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -580,6 +630,45 @@
             </div>
         </div>
 
+        <!-- HRhubly -->
+        <div class="proj-card proj-feat rv" style="margin-bottom:22px;border-color:rgba(0,245,255,.14);background:rgba(0,245,255,.02);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;margin-bottom:28px;">
+                <div>
+                    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:10px;">
+                        <h3 class="hd" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;background:linear-gradient(135deg,var(--c),#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">HRhubly</h3>
+                        <span class="mono" data-i18n="hr.live" style="padding:4px 12px;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.28);border-radius:100px;font-size:.62rem;letter-spacing:2px;color:#10b981;">LIVE &amp; FUNCTIONAL</span>
+                    </div>
+                    <a href="https://hrhubly.com" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;color:var(--c);font-size:.88rem;text-decoration:none;opacity:.75;transition:opacity .3s;">
+                        hrhubly.com <i class="fas fa-external-link-alt" style="font-size:.72rem;"></i>
+                    </a>
+                </div>
+                <div class="float-el" style="font-size:3.5rem;line-height:1;">&#x1F465;</div>
+            </div>
+            <p data-i18n="hr.desc" style="font-size:1.05rem;color:rgba(255,255,255,.55);line-height:1.75;max-width:820px;margin-bottom:32px;">
+                Smart SaaS platform for recruiters and HR professionals — build custom assessments, manage candidates, and make data-driven hiring decisions all in one modern platform.
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px;margin-bottom:28px;">
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4CB;</div><div data-i18n="hr.f1t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Custom Assessments</div><p data-i18n="hr.f1d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Multiple choice, image &amp; text questions with time limits</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F465;</div><div data-i18n="hr.f2t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Candidate Management</div><p data-i18n="hr.f2d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Track applications &amp; manage test assignments with bulk actions</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F4CA;</div><div data-i18n="hr.f3t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Analytics &amp; Reports</div><p data-i18n="hr.f3d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Candidate performance insights &amp; exportable reports</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F310;</div><div data-i18n="hr.f4t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Your Own Domain</div><p data-i18n="hr.f4d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Professional branding with custom domain support</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x1F512;</div><div data-i18n="hr.f5t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Secure &amp; Reliable</div><p data-i18n="hr.f5d" style="font-size:.74rem;color:rgba(255,255,255,.38);">99.9% uptime, encrypted data &amp; regular backups</p></div>
+                <div style="padding:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;"><div style="font-size:1.4rem;margin-bottom:7px;">&#x26A1;</div><div data-i18n="hr.f6t" style="font-size:.82rem;font-weight:600;color:var(--c);margin-bottom:4px;">Quick Setup</div><p data-i18n="hr.f6d" style="font-size:.74rem;color:rgba(255,255,255,.38);">Intuitive interface with on-site documentation &amp; 24/7 support</p></div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;">
+                <span class="tag" data-i18n="tag.fs">Full-Stack Development</span>
+                <span class="tag" data-i18n="tag.ai">AI Integration</span>
+                <span class="tag" data-i18n="tag.sa">SaaS Architecture</span>
+                <span class="tag tag-p">HR Tech</span>
+                <span class="tag" data-i18n="tag.ad">Agile Development</span>
+            </div>
+            <div style="padding:22px;background:rgba(0,245,255,.03);border:1px solid rgba(0,245,255,.12);border-radius:8px;">
+                <p data-i18n="hr.role" style="font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.75;">
+                    <span class="hi-c" style="font-weight:600;">My Role:</span> Founder, Lead Developer &amp; Product Owner. Built end-to-end — from concept to a live, actively growing SaaS platform. Designed for modern HR teams with intelligent features and seamless candidate experience.
+                </p>
+            </div>
+        </div>
+
         <div class="grid sm:grid-cols-2 gap-5">
             <div class="proj-card proj-sm rv d1">
                 <div style="font-size:2.2rem;margin-bottom:18px;">&#x1F393;</div>
@@ -629,16 +718,6 @@
                     <span class="tag" data-i18n="tag.ci">Cloud Infrastructure</span>
                     <span class="tag">AWS</span>
                     <span class="tag tag-g" data-i18n="tag.po">Process Optimization</span>
-                </div>
-            </div>
-            <div class="proj-card proj-sm rv d6">
-                <div style="font-size:2.2rem;margin-bottom:18px;">&#x1F377;</div>
-                <h3 data-i18n="wine.h" class="hd" style="font-size:1.35rem;font-weight:700;margin-bottom:11px;background:linear-gradient(135deg,var(--pk),var(--p));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">California Wine Cluster Analysis</h3>
-                <p data-i18n="wine.desc" style="font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px;">Capstone project analyzing the California wine industry, demonstrating data-driven strategy and analytical skills in a collaborative academic setting.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:7px;">
-                    <span class="tag" data-i18n="tag.da">Data Analysis</span>
-                    <span class="tag tag-p" data-i18n="tag.st">Strategy</span>
-                    <span class="tag tag-g" data-i18n="tag.rs">Research</span>
                 </div>
             </div>
         </div>
@@ -692,7 +771,7 @@
             <h2 class="sec-h rv d2" data-i18n="imp.h" style="margin-top:6px;">Real Impact</h2>
         </div>
         <div style="display:grid;grid-template-columns:repeat(2,1fr);" class="md:grid-cols-4">
-            <div class="impact-cell ic-p rv"><div class="impact-num" style="color:var(--p);" data-count="1" data-suffix="">0</div><div class="impact-lbl" data-i18n="imp.l1">LIVE SAAS PRODUCT</div></div>
+            <div class="impact-cell ic-p rv"><div class="impact-num" style="color:var(--p);" data-count="2" data-suffix="">0</div><div class="impact-lbl" data-i18n="imp.l1">LIVE SAAS PRODUCTS</div></div>
             <div class="impact-cell ic-c rv d1"><div class="impact-num" style="color:var(--c);" data-count="5" data-suffix="+">0</div><div class="impact-lbl" data-i18n="imp.l2">YEARS AGILE LEADERSHIP</div></div>
             <div class="impact-cell ic-g rv d2"><div class="impact-num" style="color:var(--g);" data-count="157" data-suffix="+">0</div><div class="impact-lbl" data-i18n="imp.l3">STUDENTS MENTORED</div></div>
             <div class="impact-cell ic-pk rv d3"><div class="impact-num" style="color:var(--pk);" data-count="40" data-suffix="%">0</div><div class="impact-lbl" data-i18n="imp.l4">AVG VELOCITY INCREASE</div></div>
@@ -758,7 +837,7 @@ var i18n={
     'hero.firstName':'ANANIA','hero.lastName':'DEVSURASHVILI',
     'nav.about':'ABOUT','nav.journey':'JOURNEY','nav.projects':'PROJECTS',
     'nav.expertise':'EXPERTISE','nav.impact':'IMPACT','nav.contact':'CONTACT',
-    'nav.hire':'<i class="fas fa-envelope" style="font-size:.72rem;"></i> HIRE ME',
+    'nav.hire':'<i class="fas fa-handshake" style="font-size:.72rem;"></i> LET\'S COLLABORATE',
     'scroll.txt':'SCROLL',
     'hero.badge':'<div class="sdot"></div>OPEN FOR CONSULTING &amp; COLLABORATION',
     'hero.desc':'Senior Scrum Master &amp; Agile Coach &bull; CSM | PSM II Certified<br>Assistant Professor at Alte University &bull; Founder @ AI Software Factory',
@@ -829,6 +908,19 @@ var i18n={
     'wine.h':'California Wine Cluster Analysis',
     'wine.desc':'Capstone project analyzing the California wine industry, demonstrating data-driven strategy and analytical skills in a collaborative academic setting.',
     'tag.ep':'Exam Preparation','tag.al':'Agile Leadership','tag.da':'Data Analysis','tag.st':'Strategy','tag.rs':'Research',
+    'about.skills.lbl':'SKILLS &amp; TOOLS','about.langs.lbl':'SPOKEN LANGUAGES',
+    'lang.ka':'Georgian','lang.ka.lv':'Native',
+    'lang.en':'English','lang.en.lv':'Fluent',
+    'lang.de':'German','lang.de.lv':'Professional',
+    'hr.live':'LIVE &amp; FUNCTIONAL',
+    'hr.desc':'Smart SaaS platform for recruiters and HR professionals — build custom assessments, manage candidates, and make data-driven hiring decisions all in one modern platform.',
+    'hr.f1t':'Custom Assessments','hr.f1d':'Multiple choice, image &amp; text questions with time limits',
+    'hr.f2t':'Candidate Management','hr.f2d':'Track applications &amp; manage test assignments with bulk actions',
+    'hr.f3t':'Analytics &amp; Reports','hr.f3d':'Candidate performance insights &amp; exportable reports',
+    'hr.f4t':'Your Own Domain','hr.f4d':'Professional branding with custom domain support',
+    'hr.f5t':'Secure &amp; Reliable','hr.f5d':'99.9% uptime, encrypted data &amp; regular backups',
+    'hr.f6t':'Quick Setup','hr.f6d':'Intuitive interface with on-site documentation &amp; 24/7 support',
+    'hr.role':'<span class="hi-c" style="font-weight:600;">My Role:</span> Founder, Lead Developer &amp; Product Owner. Built end-to-end — from concept to a live, actively growing SaaS platform. Designed for modern HR teams with intelligent features and seamless candidate experience.',
     'exp.lbl':'CHAPTER 04 &bull; CERTIFIED EXCELLENCE','exp.h':'Expertise &amp; Accreditations',
     'csm.badge':'NEW &bull; ACTIVE TO 2028',
     'c0n':'Certified ScrumMaster&reg;','c0o':'Scrum Alliance &bull; 2026 | ID 001831461','c0d':'CSM &mdash; Passed with 100%. Full Scrum Alliance membership &amp; certification privileges.',
@@ -844,7 +936,7 @@ var i18n={
     'c7n':'Coursera Specialization','c7o':'Coursera &bull; 2024','c7d':'Modern Project Leadership: Agile, AI &amp; Beyond',
     'exp.philosophy':'&ldquo;Committed to continuous learning and team empowerment. Passionate about blending cutting-edge AI into Agile practices to drive meaningful transformation.&rdquo;',
     'imp.lbl':'CHAPTER 05 &bull; METRICS','imp.h':'Real Impact',
-    'imp.l1':'LIVE SAAS PRODUCT','imp.l2':'YEARS AGILE LEADERSHIP',
+    'imp.l1':'LIVE SAAS PRODUCTS','imp.l2':'YEARS AGILE LEADERSHIP',
     'imp.l3':'STUDENTS MENTORED','imp.l4':'AVG VELOCITY INCREASE',
     'imp.testimonial':'Working with Anania boosted our team&rsquo;s agility and morale. His unique blend of AI expertise and Agile coaching transformed how we approach product delivery.',
     'imp.testimonial_author':'&mdash; TEAM COLLEAGUE, BETSSON GROUP',
@@ -861,7 +953,7 @@ var i18n={
     'hero.firstName':'ანანია','hero.lastName':'დევსურაშვილი',
     'nav.about':'ჩემს შესახებ','nav.journey':'გამოცდილება','nav.projects':'პროექტები',
     'nav.expertise':'ექსპერტიზა','nav.impact':'გავლენა','nav.contact':'კონტაქტი',
-    'nav.hire':'<i class="fas fa-envelope" style="font-size:.72rem;"></i> დამიქირავე',
+    'nav.hire':'<i class="fas fa-handshake" style="font-size:.72rem;"></i> ვითანამშრომლოთ',
     'scroll.txt':'გადახვევა',
     'hero.badge':'<div class="sdot"></div>ხელმისაწვდომია კონსულტაციისა და თანამშრომლობისთვის',
     'hero.desc':'Senior Scrum Master და Agile Coach &bull; CSM | PSM II სერტიფიცირებული<br>ასისტენტ-პროფესორი Alte University-ში &bull; დამფუძნებელი @ AI Software Factory',
@@ -932,6 +1024,19 @@ var i18n={
     'wine.h':'კალიფორნიის ღვინის კლასტერის ანალიზი',
     'wine.desc':'კურსის საბოლოო პროექტი კალიფორნიის ღვინის ინდუსტრიის ანალიზით, მონაცემებზე დაფუძნებული სტრატეგიისა და ანალიტიკური უნარების დემონსტრირება.',
     'tag.ep':'გამოცდისთვის მომზადება','tag.al':'Agile ლიდერობა','tag.da':'მონაცემთა ანალიზი','tag.st':'სტრატეგია','tag.rs':'კვლევა',
+    'about.skills.lbl':'უნარები და ხელსაწყოები','about.langs.lbl':'ენები',
+    'lang.ka':'ქართული','lang.ka.lv':'მშობლიური',
+    'lang.en':'ინგლისური','lang.en.lv':'მაღალი დონე',
+    'lang.de':'გერმანული','lang.de.lv':'პროფესიული',
+    'hr.live':'LIVE და მოქმედი',
+    'hr.desc':'ჭკვიანი SaaS პლატფორმა დამქირავებლებისა და HR სპეციალისტებისთვის — შექმენი კასტომური ტესტები, მართე კანდიდატები და მიიღე მონაცემებზე დაფუძნებული გადაწყვეტილებები ერთ თანამედროვე პლატფორმაში.',
+    'hr.f1t':'კასტომური ტესტები','hr.f1d':'მრავალჯერადი არჩევანი, სურათი და ტექსტური შეკითხვები დროის ლიმიტით',
+    'hr.f2t':'კანდიდატების მართვა','hr.f2d':'განაცხადების თვალყური და ტესტის დავალებების მართვა',
+    'hr.f3t':'ანალიტიკა და ანგარიშები','hr.f3d':'კანდიდატების შესრულების ანალიზი და ექსპორტი',
+    'hr.f4t':'საკუთარი დომენი','hr.f4d':'პროფესიული ბრენდინგი კასტომური დომენის მხარდაჭერით',
+    'hr.f5t':'უსაფრთხო და სანდო','hr.f5d':'99.9% uptime, დაშიფრული მონაცემები და რეგულარული backup',
+    'hr.f6t':'სწრაფი დაყენება','hr.f6d':'ინტუიტიური ინტერფეისი და 24/7 მხარდაჭერა',
+    'hr.role':'<span class="hi-c" style="font-weight:600;">ჩემი როლი:</span> დამფუძნებელი, წამყვანი დეველოპერი და პროდუქტის მფლობელი. ნულიდან ავაშენე — კონცეფციიდან Live SaaS პლატფორმამდე. შექმნილია თანამედროვე HR გუნდებისთვის ინტელექტუალური ფუნქციებით.',
     'exp.lbl':'თავი 04 &bull; სერტიფიცირებული ბრწყინვალება','exp.h':'ექსპერტიზა და აკრედიტაციები',
     'csm.badge':'ახალი &bull; მოქმედია 2028 წლამდე',
     'c0n':'Certified ScrumMaster&reg;','c0o':'Scrum Alliance &bull; 2026 | ID 001831461','c0d':'CSM &mdash; 100%-ით ჩაბარებული. Scrum Alliance-ის სრული წევრობა და სერტიფიკაციის პრივილეგიები.',
@@ -947,7 +1052,7 @@ var i18n={
     'c7n':'Coursera სპეციალიზაცია','c7o':'Coursera &bull; 2024','c7d':'თანამედროვე პროექტის ლიდერობა: Agile, AI და მის მიღმა',
     'exp.philosophy':'&ldquo;მუდმივი სწავლების და გუნდის განვითარების მიმართ მიძღვნილობა. ვნებიანად ვეხები უახლესი AI-ის Agile პრაქტიკებთან შერწყმას მნიშვნელოვანი ტრანსფორმაციის მისაღწევად.&rdquo;',
     'imp.lbl':'თავი 05 &bull; მეტრიკა','imp.h':'რეალური გავლენა',
-    'imp.l1':'LIVE SaaS პროდუქტი','imp.l2':'წელი AGILE ლიდერობაში',
+    'imp.l1':'LIVE SaaS პროდუქტები','imp.l2':'წელი AGILE ლიდერობაში',
     'imp.l3':'მენტორირებული სტუდენტი','imp.l4':'საშუალო სიჩქარის ზრდა',
     'imp.testimonial':'ანანიასთან მუშაობამ გაზარდა ჩვენი გუნდის სისწრაფე და მორალი. მისი AI ექსპერტიზისა და Agile კოუჩინგის უნიკალურმა შერწყმამ გარდაქმნა ჩვენი მიდგომა პროდუქტის მიწოდებისადმი.',
     'imp.testimonial_author':'&mdash; გუნდის კოლეგა, BETSSON GROUP',
