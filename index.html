@@ -283,7 +283,7 @@
         .impact-lbl{font-size:.68rem;letter-spacing:3px;color:rgba(255,255,255,.35);margin-top:10px;}
 
         /* TAG */
-        .tag{display:inline-block;padding:5px 13px;background:var(--c2);border:1px solid rgba(0,245,255,.2);border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--c);letter-spacing:.5px;transition:background .22s,border-color .22s,box-shadow .22s,transform .18s;}
+        .tag{display:inline-block;padding:4px 10px;background:var(--c2);border:1px solid rgba(0,245,255,.2);border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.63rem;color:var(--c);letter-spacing:.5px;transition:background .22s,border-color .22s,box-shadow .22s,transform .18s;}
         .tag:hover{background:rgba(0,245,255,.2);border-color:rgba(0,245,255,.55);box-shadow:0 0 14px rgba(0,245,255,.2);transform:translateY(-1px);}
         .tag-p{background:var(--p2);border-color:rgba(139,92,246,.2);color:var(--p);}
         .tag-p:hover{background:rgba(139,92,246,.22);border-color:rgba(139,92,246,.55);box-shadow:0 0 14px rgba(139,92,246,.2);}
@@ -358,10 +358,12 @@
         @keyframes secLblGlow{0%,100%{opacity:.7}50%{opacity:1;text-shadow:0 0 10px rgba(0,245,255,.35);}}
 
         /* SKILL CATEGORIES */
-        .skill-cat-hdr{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2.5px;display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:5px 0;}
-        .skill-cat-hdr .cat-icon{font-size:1rem;line-height:1;}
-        .skill-cat-wrap{padding:14px;background:rgba(255,255,255,.018);border:1px solid rgba(255,255,255,.055);border-radius:8px;margin-bottom:10px;transition:border-color .3s,background .3s;}
+        .skill-cat-hdr{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:2px;display:flex;align-items:center;gap:6px;margin-bottom:7px;padding:3px 0;}
+        .skill-cat-hdr .cat-icon{font-size:.88rem;line-height:1;}
+        .skill-cat-wrap{padding:10px;background:rgba(255,255,255,.018);border:1px solid rgba(255,255,255,.055);border-radius:8px;margin-bottom:0;transition:border-color .3s,background .3s;}
         .skill-cat-wrap:hover{background:rgba(255,255,255,.03);border-color:rgba(0,245,255,.14);}
+        .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+        @media(max-width:540px){.skills-grid{grid-template-columns:1fr;}}
 
         /* CLICK RIPPLE */
         .ripple-host{position:relative;overflow:hidden;}
@@ -541,13 +543,15 @@
                 </div>
 
                 <!-- SKILLS & LANGUAGES -->
-                <div class="rv d4" style="padding-top:28px;border-top:1px solid rgba(255,255,255,.06);">
-                    <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-bottom:14px;" data-i18n="about.skills.lbl">SKILLS &amp; TOOLS</div>
+                <div class="rv d4" style="padding-top:18px;border-top:1px solid rgba(255,255,255,.06);">
+                    <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-bottom:10px;" data-i18n="about.skills.lbl">SKILLS &amp; TOOLS</div>
 
+                    <!-- SKILLS GRID: 2x2 -->
+                    <div class="skills-grid">
                     <!-- AI & Intelligence -->
                     <div class="skill-cat-wrap">
                         <div class="skill-cat-hdr" style="color:var(--g);"><span class="cat-icon">🤖</span><span data-i18n="sk.ai.cat">AI &amp; INTELLIGENCE</span></div>
-                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                        <div style="display:flex;flex-wrap:wrap;gap:5px;">
                             <span class="tag tag-g">GPT / LLM Engineering</span>
                             <span class="tag tag-g">Prompt Engineering</span>
                             <span class="tag tag-g">Generative AI</span>
@@ -560,7 +564,7 @@
                     <!-- Entrepreneurship & Growth -->
                     <div class="skill-cat-wrap">
                         <div class="skill-cat-hdr" style="color:var(--p);"><span class="cat-icon">🚀</span><span data-i18n="sk.en.cat">ENTREPRENEURSHIP &amp; GROWTH</span></div>
-                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                        <div style="display:flex;flex-wrap:wrap;gap:5px;">
                             <span class="tag tag-p">SaaS Go-to-Market</span>
                             <span class="tag tag-p">OKR Framework</span>
                             <span class="tag tag-p">Product-Market Fit</span>
@@ -573,7 +577,7 @@
                     <!-- Agile Mastery -->
                     <div class="skill-cat-wrap">
                         <div class="skill-cat-hdr" style="color:var(--c);"><span class="cat-icon">⚙️</span><span data-i18n="sk.ag.cat">AGILE MASTERY</span></div>
-                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                        <div style="display:flex;flex-wrap:wrap;gap:5px;">
                             <span class="tag">Scrum at Scale</span>
                             <span class="tag">Kanban</span>
                             <span class="tag">SAFe</span>
@@ -584,9 +588,9 @@
                     </div>
 
                     <!-- Tech Stack -->
-                    <div class="skill-cat-wrap" style="margin-bottom:22px;">
+                    <div class="skill-cat-wrap">
                         <div class="skill-cat-hdr" style="color:rgba(255,255,255,.5);"><span class="cat-icon">💻</span><span data-i18n="sk.tc.cat">TECH STACK</span></div>
-                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                        <div style="display:flex;flex-wrap:wrap;gap:5px;">
                             <span class="tag">OpenAI API</span>
                             <span class="tag">LangChain</span>
                             <span class="tag">Blockchain / Web3</span>
@@ -596,8 +600,9 @@
                             <span class="tag">Jira / Confluence</span>
                         </div>
                     </div>
-                    <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-bottom:12px;" data-i18n="about.langs.lbl">SPOKEN LANGUAGES</div>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
+                    </div><!-- end .skills-grid -->
+                    <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-top:14px;margin-bottom:8px;" data-i18n="about.langs.lbl">SPOKEN LANGUAGES</div>
+                    <div style="display:flex;flex-direction:column;gap:6px;">
                         <div class="lang-bar-row">
                             <img src="https://flagcdn.com/w20/ge.png" alt="Georgian" style="width:1.15em;height:auto;border-radius:2px;">
                             <span style="font-size:.82rem;color:rgba(255,255,255,.65);min-width:90px;" data-i18n="lang.ka">Georgian</span>
