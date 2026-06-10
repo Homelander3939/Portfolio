@@ -356,6 +356,22 @@
 
         /* SKILL TAG SECTION HEADER PULSE */
         @keyframes secLblGlow{0%,100%{opacity:.7}50%{opacity:1;text-shadow:0 0 10px rgba(0,245,255,.35);}}
+
+        /* SKILL CATEGORIES */
+        .skill-cat-hdr{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2.5px;display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:5px 0;}
+        .skill-cat-hdr .cat-icon{font-size:1rem;line-height:1;}
+        .skill-cat-wrap{padding:14px;background:rgba(255,255,255,.018);border:1px solid rgba(255,255,255,.055);border-radius:8px;margin-bottom:10px;transition:border-color .3s,background .3s;}
+        .skill-cat-wrap:hover{background:rgba(255,255,255,.03);border-color:rgba(0,245,255,.14);}
+
+        /* CLICK RIPPLE */
+        .ripple-host{position:relative;overflow:hidden;}
+        @keyframes rippleAnim{to{transform:scale(4);opacity:0;}}
+        .ripple-el{position:absolute;border-radius:50%;transform:scale(0);animation:rippleAnim .65s linear;pointer-events:none;background:rgba(0,245,255,.22);}
+
+        /* SOUND TOGGLE */
+        #soundToggle{position:fixed;bottom:28px;left:28px;z-index:50;width:44px;height:44px;border:1px solid rgba(255,255,255,.15);background:rgba(0,0,0,.5);backdrop-filter:blur(10px);border-radius:4px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:.88rem;transition:all .3s;}
+        #soundToggle.snd-on{border-color:rgba(0,245,255,.35);color:var(--c);box-shadow:0 0 16px rgba(0,245,255,.14);}
+        #soundToggle:hover{border-color:rgba(0,245,255,.5);color:var(--c);}
     </style>
 </head>
 <body>
@@ -526,24 +542,59 @@
 
                 <!-- SKILLS & LANGUAGES -->
                 <div class="rv d4" style="padding-top:28px;border-top:1px solid rgba(255,255,255,.06);">
-                    <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-bottom:12px;" data-i18n="about.skills.lbl">SKILLS &amp; TOOLS</div>
-                    <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px;">
-                        <span class="tag">Scrum</span>
-                        <span class="tag">Kanban</span>
-                        <span class="tag">SAFe</span>
-                        <span class="tag">XP &amp; Lean</span>
-                        <span class="tag tag-p">Jira</span>
-                        <span class="tag tag-p">Confluence</span>
-                        <span class="tag tag-p">Miro</span>
-                        <span class="tag tag-p">Azure DevOps</span>
-                        <span class="tag tag-g">AI / ML</span>
-                        <span class="tag tag-g">SaaS</span>
-                        <span class="tag tag-g">Blockchain</span>
-                        <span class="tag tag-g">AWS</span>
-                        <span class="tag">Servant Leadership</span>
-                        <span class="tag">Team Coaching</span>
-                        <span class="tag">Facilitation</span>
-                        <span class="tag">Stakeholder Mgmt</span>
+                    <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-bottom:14px;" data-i18n="about.skills.lbl">SKILLS &amp; TOOLS</div>
+
+                    <!-- AI & Intelligence -->
+                    <div class="skill-cat-wrap">
+                        <div class="skill-cat-hdr" style="color:var(--g);"><span class="cat-icon">🤖</span><span data-i18n="sk.ai.cat">AI &amp; INTELLIGENCE</span></div>
+                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                            <span class="tag tag-g">GPT / LLM Engineering</span>
+                            <span class="tag tag-g">Prompt Engineering</span>
+                            <span class="tag tag-g">Generative AI</span>
+                            <span class="tag tag-g">AI Product Strategy</span>
+                            <span class="tag tag-g">MLOps</span>
+                            <span class="tag tag-g">NLP / Transformers</span>
+                        </div>
+                    </div>
+
+                    <!-- Entrepreneurship & Growth -->
+                    <div class="skill-cat-wrap">
+                        <div class="skill-cat-hdr" style="color:var(--p);"><span class="cat-icon">🚀</span><span data-i18n="sk.en.cat">ENTREPRENEURSHIP &amp; GROWTH</span></div>
+                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                            <span class="tag tag-p">SaaS Go-to-Market</span>
+                            <span class="tag tag-p">OKR Framework</span>
+                            <span class="tag tag-p">Product-Market Fit</span>
+                            <span class="tag tag-p">Venture Building</span>
+                            <span class="tag tag-p">Business Model Design</span>
+                            <span class="tag tag-p">Startup Strategy</span>
+                        </div>
+                    </div>
+
+                    <!-- Agile Mastery -->
+                    <div class="skill-cat-wrap">
+                        <div class="skill-cat-hdr" style="color:var(--c);"><span class="cat-icon">⚙️</span><span data-i18n="sk.ag.cat">AGILE MASTERY</span></div>
+                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                            <span class="tag">Scrum at Scale</span>
+                            <span class="tag">Kanban</span>
+                            <span class="tag">SAFe</span>
+                            <span class="tag">Design Thinking</span>
+                            <span class="tag">Value Stream Mapping</span>
+                            <span class="tag">XP &amp; Lean</span>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="skill-cat-wrap" style="margin-bottom:22px;">
+                        <div class="skill-cat-hdr" style="color:rgba(255,255,255,.5);"><span class="cat-icon">💻</span><span data-i18n="sk.tc.cat">TECH STACK</span></div>
+                        <div style="display:flex;flex-wrap:wrap;gap:7px;">
+                            <span class="tag">OpenAI API</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">Blockchain / Web3</span>
+                            <span class="tag">AWS Cloud</span>
+                            <span class="tag">Full-Stack SaaS</span>
+                            <span class="tag">Azure DevOps</span>
+                            <span class="tag">Jira / Confluence</span>
+                        </div>
                     </div>
                     <div style="font-size:.62rem;letter-spacing:2.5px;color:rgba(255,255,255,.32);margin-bottom:12px;" data-i18n="about.langs.lbl">SPOKEN LANGUAGES</div>
                     <div style="display:flex;flex-direction:column;gap:10px;">
@@ -935,6 +986,9 @@
     </div>
 </section>
 
+<!-- SOUND TOGGLE -->
+<button id="soundToggle" aria-label="Toggle sound effects" title="Toggle sounds"><i class="fas fa-volume-up"></i></button>
+
 <!-- BACK TO TOP -->
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
@@ -1058,7 +1112,8 @@ var i18n={
     'con.cta':'Ready to collaborate or learn more? Let&rsquo;s connect and build something great together.',
     'con.btn':'<i class="fas fa-paper-plane" style="font-size:.72rem;"></i> CONTACT ME',
     'con.footer':'&copy; 2026 Anania Devsurashvili &bull; Made with futuristic love in Georgia <img src="https://flagcdn.com/w20/ge.png" alt="Georgian flag" style="width:1em;height:auto;vertical-align:middle;display:inline;">',
-    'typedPhrases':['Senior Scrum Master','Agile Coach','CSM | PSM II Certified','Tech Educator & Lecturer','Founder @ AI Software Factory','Agile Transformation Expert']
+    'typedPhrases':['Senior Scrum Master','Agile Coach','CSM | PSM II Certified','Tech Educator & Lecturer','Founder @ AI Software Factory','Agile Transformation Expert'],
+    'sk.ai.cat':'AI &amp; INTELLIGENCE','sk.en.cat':'ENTREPRENEURSHIP &amp; GROWTH','sk.ag.cat':'AGILE MASTERY','sk.tc.cat':'TECH STACK'
   },
   ka:{
     'pl.init':'პორტფოლიო იტვირთება',
@@ -1174,7 +1229,8 @@ var i18n={
     'con.cta':'გსურთ თანამშრომლობა ან მეტის გაგება? დავუკავშირდეთ ერთმანეთს და შევქმნათ რაღაც დიდი ერთად.',
     'con.btn':'<i class="fas fa-paper-plane" style="font-size:.72rem;"></i> დამიკავშირდით',
     'con.footer':'&copy; 2026 ანანია დევსურაშვილი &bull; შექმნილია სიყვარულით საქართველოში <img src="https://flagcdn.com/w20/ge.png" alt="Georgian flag" style="width:1em;height:auto;vertical-align:middle;display:inline;">',
-    'typedPhrases':['Senior Scrum Master','Agile Coach','CSM | PSM II სერტიფიცირებული','ტექ-პედაგოგი და ლექტორი','დამფუძნებელი @ AI Software Factory','Agile ტრანსფორმაციის ექსპერტი']
+    'typedPhrases':['Senior Scrum Master','Agile Coach','CSM | PSM II სერტიფიცირებული','ტექ-პედაგოგი და ლექტორი','დამფუძნებელი @ AI Software Factory','Agile ტრანსფორმაციის ექსპერტი'],
+    'sk.ai.cat':'AI &amp; ინტელექტი','sk.en.cat':'მეწარმეობა &amp; ზრდა','sk.ag.cat':'AGILE ოსტატობა','sk.tc.cat':'ტექ სტეკი'
   }
 };
 
@@ -1292,6 +1348,68 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
 (function(){
     var saved;try{saved=localStorage.getItem('portfolio_lang');}catch(e){}
     if(saved&&saved!=='en')setLang(saved);
+})();
+
+/* CLICK RIPPLE EFFECT */
+(function(){
+    document.querySelectorAll('.btn-p,.btn-s,.hire-btn').forEach(function(el){
+        el.classList.add('ripple-host');
+        el.addEventListener('click',function(e){
+            var r=el.getBoundingClientRect(),sz=Math.max(r.width,r.height);
+            var sp=document.createElement('span');
+            sp.className='ripple-el';
+            sp.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+(e.clientX-r.left-sz/2)+'px;top:'+(e.clientY-r.top-sz/2)+'px;';
+            el.appendChild(sp);setTimeout(function(){sp.remove();},700);
+        });
+    });
+})();
+
+/* PLEASANT CLICK SOUNDS */
+var soundEnabled=false;
+(function(){
+    var AudioCtx=window.AudioContext||window.webkitAudioContext;
+    var actx=null;
+    var stBtn=document.getElementById('soundToggle');
+
+    function getCtx(){
+        if(!actx)actx=new AudioCtx();
+        if(actx.state==='suspended')actx.resume();
+        return actx;
+    }
+    function chime(freq,vol,dur,delay){
+        if(!soundEnabled||!AudioCtx)return;
+        var ac=getCtx();
+        setTimeout(function(){
+            var osc=ac.createOscillator(),g=ac.createGain();
+            osc.connect(g);g.connect(ac.destination);
+            osc.type='sine';
+            osc.frequency.setValueAtTime(freq,ac.currentTime);
+            g.gain.setValueAtTime(vol,ac.currentTime);
+            g.gain.exponentialRampToValueAtTime(0.0001,ac.currentTime+dur);
+            osc.start(ac.currentTime);osc.stop(ac.currentTime+dur);
+        },delay||0);
+    }
+    function playNav(){chime(880,.07,.28);chime(1108,.05,.22,90);}
+    function playBtn(){chime(523,.09,.32);chime(659,.07,.26,80);chime(784,.05,.22,160);}
+    function playCard(){chime(1047,.04,.2);}
+    function playSecondary(){chime(660,.06,.22);}
+
+    document.querySelectorAll('.nl,.mm-link').forEach(function(el){el.addEventListener('click',playNav);});
+    document.querySelectorAll('.btn-p,.hire-btn').forEach(function(el){el.addEventListener('click',playBtn);});
+    document.querySelectorAll('.btn-s,.soc-btn,#btt').forEach(function(el){el.addEventListener('click',playSecondary);});
+    document.querySelectorAll('.tl-card,.cert-card,.proj-card').forEach(function(el){
+        el.addEventListener('click',playCard);
+        el.addEventListener('touchstart',playCard,{passive:true});
+    });
+
+    if(stBtn){
+        stBtn.addEventListener('click',function(){
+            soundEnabled=!soundEnabled;
+            stBtn.classList.toggle('snd-on',soundEnabled);
+            stBtn.querySelector('i').className=soundEnabled?'fas fa-volume-up':'fas fa-volume-mute';
+            if(soundEnabled){chime(880,.08,.22);chime(1100,.06,.18,85);}
+        });
+    }
 })();
 </script>
 </body>
