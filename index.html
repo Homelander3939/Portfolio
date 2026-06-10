@@ -987,7 +987,7 @@
 </section>
 
 <!-- SOUND TOGGLE -->
-<button id="soundToggle" aria-label="Toggle sound effects" title="Toggle sounds"><i class="fas fa-volume-up"></i></button>
+<button id="soundToggle" aria-label="Toggle sound effects" aria-pressed="false" title="Enable sound effects"><i class="fas fa-volume-mute"></i></button>
 
 <!-- BACK TO TOP -->
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
@@ -1356,9 +1356,12 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
         el.classList.add('ripple-host');
         el.addEventListener('click',function(e){
             var r=el.getBoundingClientRect(),sz=Math.max(r.width,r.height);
+            var isKeyboardClick=e.detail===0&&e.clientX===0&&e.clientY===0;
+            var cx=isKeyboardClick?(r.left+r.width/2):e.clientX;
+            var cy=isKeyboardClick?(r.top+r.height/2):e.clientY;
             var sp=document.createElement('span');
             sp.className='ripple-el';
-            sp.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+(e.clientX-r.left-sz/2)+'px;top:'+(e.clientY-r.top-sz/2)+'px;';
+            sp.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+(cx-r.left-sz/2)+'px;top:'+(cy-r.top-sz/2)+'px;';
             el.appendChild(sp);setTimeout(function(){sp.remove();},700);
         });
     });
@@ -1373,7 +1376,10 @@ var soundEnabled=false;
 
     function getCtx(){
         if(!actx)actx=new AudioCtx();
-        if(actx.state==='suspended')actx.resume();
+        if(actx.state==='suspended'){
+            var resumePromise=actx.resume();
+            if(resumePromise&&typeof resumePromise.catch==='function')resumePromise.catch(function(){});
+        }
         return actx;
     }
     function chime(freq,vol,dur,delay){
@@ -1397,16 +1403,29 @@ var soundEnabled=false;
     document.querySelectorAll('.nl,.mm-link').forEach(function(el){el.addEventListener('click',playNav);});
     document.querySelectorAll('.btn-p,.hire-btn').forEach(function(el){el.addEventListener('click',playBtn);});
     document.querySelectorAll('.btn-s,.soc-btn,#btt').forEach(function(el){el.addEventListener('click',playSecondary);});
+    var lastCardTouchTs=0;
     document.querySelectorAll('.tl-card,.cert-card,.proj-card').forEach(function(el){
-        el.addEventListener('click',playCard);
-        el.addEventListener('touchstart',playCard,{passive:true});
+        el.addEventListener('touchstart',function(){
+            lastCardTouchTs=Date.now();
+            playCard();
+        },{passive:true});
+        el.addEventListener('click',function(){
+            if(Date.now()-lastCardTouchTs<500)return;
+            playCard();
+        });
     });
 
     if(stBtn){
-        stBtn.addEventListener('click',function(){
-            soundEnabled=!soundEnabled;
+        function syncSoundToggle(){
             stBtn.classList.toggle('snd-on',soundEnabled);
             stBtn.querySelector('i').className=soundEnabled?'fas fa-volume-up':'fas fa-volume-mute';
+            stBtn.setAttribute('aria-pressed',soundEnabled?'true':'false');
+            stBtn.title=soundEnabled?'Disable sound effects':'Enable sound effects';
+        }
+        syncSoundToggle();
+        stBtn.addEventListener('click',function(){
+            soundEnabled=!soundEnabled;
+            syncSoundToggle();
             if(soundEnabled){chime(880,.08,.22);chime(1100,.06,.18,85);}
         });
     }
