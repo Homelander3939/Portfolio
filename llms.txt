@@ -1,0 +1,27 @@
+# Anania Devsurashvili
+
+> Anania Devsurashvili is a Senior Scrum Master, Agile Coach and AI entrepreneur based in Tbilisi, Georgia. CSM and PSM II certified. Founder and Director of AI Software Factory Ltd (London), founder and lead developer of SmartBookly and HRhubly, and Assistant Professor at Alte University. This portfolio lists SaaS products, media projects and Agile education work.
+
+This site is a single static page, available in English and Georgian (use the KA toggle on the page). The full profile in plain text is at https://homelander3939.github.io/Portfolio/llms-full.txt.
+
+## Portfolio
+
+- [Portfolio home](https://homelander3939.github.io/Portfolio/): Full profile with experience, certifications, education, projects and profile links.
+
+## Products and projects
+
+- [SmartBookly](https://smartbookly.com): All-in-one SaaS platform for small and medium businesses with AI-driven automation and real-time analytics.
+- [HRhubly](https://hrhubly.com): Smart SaaS platform for recruiters and HR professionals: custom assessments, candidate management and analytics.
+- [SportsBriefly](https://sportsbriefly.com): Your daily sports briefing in about three minutes.
+- [DevSolabs](https://devsolabs.com): Custom software and AI products for businesses, including web and mobile apps, automations and SaaS platforms.
+- [TechNewsList](https://technewslist.com): A daily tech news digest on AI, crypto, fintech, hardware, software, robotics and gaming.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/anania-devsurashvili/): Professional profile.
+- [GitHub](https://github.com/Homelander3939): Code repositories.
+
+## Optional
+
+- [Full profile in plain text](https://homelander3939.github.io/Portfolio/llms-full.txt): Detailed experience, certifications, education, languages and product notes.
+- [Sitemap](https://homelander3939.github.io/Portfolio/sitemap.xml): URL list for crawlers.

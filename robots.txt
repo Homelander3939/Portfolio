@@ -1,0 +1,26 @@
+# robots.txt for https://homelander3939.github.io/Portfolio/
+#
+# Crawlers only read robots.txt from the root of a host
+# (https://homelander3939.github.io/robots.txt). This copy documents the
+# crawl policy and is enforced only if it is served from that location.
+#
+# Policy: search engines, AI crawlers and LLM agents may access the site.
+
+User-agent: *
+Allow: /
+
+# AI crawlers and assistants (explicitly allowed)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://homelander3939.github.io/Portfolio/sitemap.xml

@@ -1,0 +1,73 @@
+# Anania Devsurashvili: full profile
+
+Source: https://homelander3939.github.io/Portfolio/
+Last updated: 2026-10-26
+Languages of the source page: English (default) and Georgian (KA toggle).
+
+## Summary
+
+Anania Devsurashvili is a Senior Scrum Master, Agile Coach and AI entrepreneur based in Tbilisi, Georgia. CSM and PSM II certified. Founder and Director of AI Software Factory Ltd (London, remote). Assistant Professor at Alte University (IT Faculty). Founder and lead developer of SmartBookly and HRhubly. Available for consulting, according to the portfolio page.
+
+## Experience
+
+Current:
+- Senior Scrum Master, Caucasus Auto Import (Tbilisi), January 2024 to present. Led organization-wide Scrum implementation; the portfolio page reports a 40% average velocity increase.
+- Founder and Director, AI Software Factory Ltd (London, remote), May 2025 to present.
+- Assistant Professor (IT Faculty), Alte University (Tbilisi), September 2022 to present.
+
+Previous:
+- Scrum Master, Betsson Group, March 2021 to January 2024.
+
+Projects:
+- Europebet x AWS Infrastructure (2023): led IT infrastructure collaboration between Georgia and Ireland, improving betting platform connectivity and system reliability through AWS integration.
+
+## Certifications
+
+- CSM (Certified ScrumMaster), Scrum Alliance.
+- PSM II (Professional Scrum Master II), Scrum.org, 2022. Focus: advanced coaching and organizational agility.
+- PSM I (Professional Scrum Master I), Scrum.org.
+- PSPO I (Professional Scrum Product Owner I), Scrum.org, October 2023. Focus: product vision and value maximization.
+- PAL I (Professional Agile Leadership I) and PSK I (Professional Scrum with Kanban I), Scrum.org, 2023 to 2024.
+- PMI Agile Foundations, Project Management Institute, 2023.
+- Google Agile Essentials, Google / LinkedIn, 2026.
+- Coursera specialization "Modern Project Leadership: Agile, AI & Beyond", 2024.
+
+## Education
+
+- Master's degree (M.Sc.) in Public Management, German University of Administrative Sciences Speyer, Germany. Focus: public management and governance.
+
+## Teaching and courses
+
+- Alte University: curriculum for Blockchain, Smart Contracts and History of Technology courses.
+- Udemy: PSM I exam preparation course with 320 certification questions created by Anania Devsurashvili.
+- Udemy: PAL I exam preparation course with 240 questions, authored by Anania Devsurashvili.
+
+## Events
+
+- EU "Successful R&I 2025" conference, Düsseldorf, Germany, 2025. Attended to exchange digital technology ideas and represent Georgian tech innovation at European level.
+
+## Products and projects
+
+- SmartBookly (https://smartbookly.com): all-in-one SaaS platform for small and medium businesses with AI-driven automation and real-time analytics. Role: Founder, Lead Developer and Product Owner. Conceived, designed and developed the platform from the ground up, applying Agile/Scrum methods.
+- HRhubly (https://hrhubly.com): smart SaaS platform for recruiters and HR professionals, for building custom assessments, managing candidates and making data-driven hiring decisions. Role: Founder, Lead Developer and Product Owner.
+- SportsBriefly (https://sportsbriefly.com): your daily sports briefing in about three minutes.
+- DevSolabs (https://devsolabs.com): custom software and AI products for businesses, including web and mobile apps, automations and SaaS platforms.
+- TechNewsList (https://technewslist.com): a daily tech news digest on AI, crypto, fintech, hardware, software, robotics and gaming.
+
+## Skills and focus areas
+
+- Scrum Master and Agile coaching; Agile transformation; Agile leadership; team coaching.
+- Applied AI development and SaaS architecture.
+- Smart contracts, DeFi and distributed systems (blockchain and Web3).
+
+## Languages
+
+- Georgian: native
+- English: fluent
+- Russian: intermediate
+
+## Profiles and contact
+
+- LinkedIn: https://www.linkedin.com/in/anania-devsurashvili/
+- GitHub: https://github.com/Homelander3939
+- Contact: through the LinkedIn or GitHub profile.
